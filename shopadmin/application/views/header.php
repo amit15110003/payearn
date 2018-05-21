@@ -424,6 +424,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
             		<i class="m-menu__link-icon fa fa-image"></i>
+            		<span class="m-menu__link-text">User Details</span>
+            		<i class="m-menu__ver-arrow la la-angle-right"></i>
+            	</a>
+            	<div class="m-menu__submenu ">
+            		<span class="m-menu__arrow"></span>
+            		<ul class="m-menu__subnav">
+            			<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+            				<span class="m-menu__link"><span class="m-menu__link-text">User Details</span></span>
+            			</li>
+            			<li class="m-menu__item " aria-haspopup="true" >
+            				<a  href="<?php echo base_url();?>index.php/user" class="m-menu__link ">
+            					<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+            					<span class="m-menu__link-text">User</span>
+            				</a>
+            			</li>
+            			<li class="m-menu__item " aria-haspopup="true" >
+            				<a  href="<?php echo base_url();?>index.php/user/insertuser" class="m-menu__link ">
+            					<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+            					<span class="m-menu__link-text">Add User</span>
+            				</a>
+            			</li>
+            			<li class="m-menu__item " aria-haspopup="true" >
+            				<a  href="<?php echo base_url();?>index.php/home/Warehouse" class="m-menu__link ">
+            					<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+            					<span class="m-menu__link-text">Warehouse</span>
+            				</a>
+            			</li>
+            			<li class="m-menu__item " aria-haspopup="true" >
+            				<a  href="index4b55.html?page=components/base/typography&amp;demo=default" class="m-menu__link ">
+            					<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+            					<span class="m-menu__link-text">songs</span>
+            				</a>
+            			</li>
+            			<li class="m-menu__item " aria-haspopup="true" >
+            				<a  href="index4b55.html?page=components/base/typography&amp;demo=default" class="m-menu__link ">
+            					<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+            					<span class="m-menu__link-text">portfolio</span>
+            				</a>
+            			</li>
+					</ul>
+				</div>
+			</li>
+            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+            	<a  href="#" class="m-menu__link m-menu__toggle">
+            		<i class="m-menu__link-icon fa fa-image"></i>
             		<span class="m-menu__link-text">Account</span>
             		<i class="m-menu__ver-arrow la la-angle-right"></i>
             	</a>
