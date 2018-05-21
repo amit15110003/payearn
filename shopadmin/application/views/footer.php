@@ -552,7 +552,9 @@
         <!--begin::Page Snippets --> 
                 <script src="<?php echo base_url();?>assets/app/js/dashboard.js" type="text/javascript"></script>
                 <!--end::Page Snippets -->   
-                
+        <!--begin::Page Resources --> 
+                <script src="<?php echo base_url();?>assets/demo/default/custom/components/datatables/base/html-table.js" type="text/javascript"></script>
+                <!--end::Page Resources -->          
             </body>
     <!-- end::Body -->
 </html>
