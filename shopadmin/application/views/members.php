@@ -127,6 +127,37 @@
 				</div>
 				<?php echo form_close(); ?>
 				<!--end::Form-->
+
+
+				<!--begin: Datatable -->
+		<table class="m-datatable" id="html_table" width="100%">
+			<thead>
+			<tr>
+				<th title="Field #1">Member ID</th>
+				<th title="Field #2">User Name</th>
+				<th title="Field #4">Contact</th>
+				<th title="Field #6">Email</th>
+				<th title="Field #7">Edit</th>
+			</tr>
+			</thead>
+			<tbody>
+			<?php foreach ($query as $row) {?>
+			<tr>
+				<td><?php echo $row->a_id;?></td>
+				<td><?php echo $row->a_username;?></td>
+				<td><?php echo $row->a_contact;?></td>
+				<td><?php echo $row->a_mail;?></td>
+				<td><a href="<?php echo base_url();?>index.php/user/user_id/<?php echo $row->u_id;?>" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+						<span>
+							
+							<span>Update</span>
+						</span>
+					</a></td>
+			</tr>
+			<?php }?>
+			</tbody>
+		</table>
+		<!--end: Datatable -->
 			</div>
 		</div>
 	</div>

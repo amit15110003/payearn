@@ -59,6 +59,19 @@ class admin extends CI_Model
 	{
 		return $this->db->insert('admin_login', $data);
 	}
+	function update_member($u_id,$data)
+	{
+		$this->db->where('a_id', $a_id);
+		return $this->db->update('member', $data);
+		
+	}
+	function memberbyid($u_id)
+	{
+		$this->db->where('a_id', $a_id);
+        $query = $this->db->get('member');
+		return $query->result();
+	}
+
 
 	function toggle_member($a_id,$status)
 	{
@@ -103,55 +116,6 @@ class admin extends CI_Model
 		return $this->db->update('category', $data);
 	}
 
-/*	function get_user($email, $pwd)
-	{
-		$this->db->where('email', $email);
-		$this->db->where('password', md5($pwd));
-        $query = $this->db->get('user');
-        $data['modified'] = date("Y-m-d H:i:s");
-		$update = $this->db->update('user',$data);
-		return $query->result();
-	}
-	    function get_userpass($email)
-	{
-		$this->db->where('email', $email);    
-                $query = $this->db->get('user');
-		return $query->result();
-	}
-	function get_account($uid)
-	{
-		$this->db->where('uid', $uid);
-        $query = $this->db->get('account');
-		return $query->result();
-	}
-	
-	// get user
-	function get_user_by_id($id)
-	{
-		$this->db->where('id', $id);
-        $query = $this->db->get('user');
-		return $query->result();
-	}
-	
-	// insert
-	function insert_user($data)
-    {
-    	$data['created'] = date("Y-m-d H:i:s");
-		return $this->db->insert('user', $data);
-	}
 
-	function update($id, $fname, $lname, $contact)
-    {	
-    	$data = array('fname'=>$fname, 'lname'=>$lname, 'contact'=>$contact);
-    	$this->db->where('id', $id);
-		return $this->db->update('user', $data);
-	}
-	public function showcategory()
-	{
-
-		$this->db->order_by("id", "asc");
-		$query=$this->db->get('category');
-		return $query->result();
-	}*/
 
 }?>

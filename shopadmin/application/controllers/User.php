@@ -63,7 +63,46 @@ class User extends CI_Controller {
 				redirect($_SERVER['HTTP_REFERER']);
 			}
 		}
+
+		}
+		public function user_id($u_id)
+	{   $details=$this->usermodal->userbyid($u_id);
+        	    	$data['u_id'] = $details[0]->u_id;
+        			$data['u_name'] = $details[0]->u_name;
+        			$data['u_contact'] = $details[0]->u_contact;
+        			$data['u_add'] = $details[0]->u_add;
+					$data['u_mail'] = $details[0]->u_mail;
+					
+     			$this->load->view('header');
+				$this->load->view('userbyid',$data);
+				$this->load->view('footer');
 	}
+	public function update_user($u_id)
+	{	
+
+			$data = array
+			(
+				'u_name' => $this->input->post('u_name'),
+				'u_contact' => $this->input->post('u_contact'),
+				'u_add' => $this->input->post('u_add'),
+				'u_mail' => $this->input->post('u_mail')
+				
+			);
+			
+			if ($this->usermodal->update_user($u_id,$data))
+			{
+				$this->session->set_flashdata('msg','<div class="">Thanks for sending us your details! Our team will be in touch with you soon.</div>');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+			else
+			{
+				// error
+				$this->session->set_flashdata('msg','<div class="">Oops! Error.  Please try again later!!!</div>');
+				//redirect($_SERVER['HTTP_REFERER']);
+			}
+		
+	}
+	
 
 
 	public function toggle_user($w_id,$w_status)

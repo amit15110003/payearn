@@ -6,48 +6,9 @@ class usermodal extends CI_Model
     {
         parent::__construct();
     }
-    function adminlogin($email, $pwd)
-	{
-		$this->db->where('a_mail', $email);
-		$this->db->where('a_pass', md5($pwd));
-        $query = $this->db->get('admin_login');
-        $data['a_lastseen'] = date("Y-m-d H:i:s");
-		$update = $this->db->update('admin_login',$data);
-		return $query->result();
-	}
+    
 
-	function insert_admin($data)
-    {
-    	$data['a_created'] = date("Y-m-d H:i:s");
-		return $this->db->insert('admin_login', $data);
-	}
-
-	function update_admin($id,$data)
-	{
-		$this->db->where('a_id',$id);
-		return $this->db->update('admin', $data);
-	}
 	
-	function update_admin_login($id,$logindata)
-	{
-		$this->db->where('a_id',$id);
-		return $this->db->update('admin_login', $logindata);
-	}
-
-	function get_admin($id)
-	{
-		$this->db->where('a_id', $id);
-        $query = $this->db->get('admin');
-		return $query->result();
-	}
-
-	function get_admin_login($id)
-	{
-		$this->db->where('a_id', $id);
-        $query = $this->db->get('admin_login');
-		return $query->result();
-	}
-
 	function get_members($id)
 	{
 		$this->db->where('a_id', $id);
@@ -62,6 +23,18 @@ class usermodal extends CI_Model
 	function add_user($data)
 	{
 		return $this->db->insert('user', $data);
+	}
+	function update_user($u_id,$data)
+	{
+		$this->db->where('u_id', $u_id);
+		return $this->db->update('user', $data);
+		
+	}
+	function userbyid($u_id)
+	{
+		$this->db->where('u_id', $u_id);
+        $query = $this->db->get('user');
+		return $query->result();
 	}
 
 	function toggle_member($a_id,$status)
@@ -107,55 +80,6 @@ class usermodal extends CI_Model
 		return $this->db->update('category', $data);
 	}
 
-/*	function get_user($email, $pwd)
-	{
-		$this->db->where('email', $email);
-		$this->db->where('password', md5($pwd));
-        $query = $this->db->get('user');
-        $data['modified'] = date("Y-m-d H:i:s");
-		$update = $this->db->update('user',$data);
-		return $query->result();
-	}
-	    function get_userpass($email)
-	{
-		$this->db->where('email', $email);    
-                $query = $this->db->get('user');
-		return $query->result();
-	}
-	function get_account($uid)
-	{
-		$this->db->where('uid', $uid);
-        $query = $this->db->get('account');
-		return $query->result();
-	}
-	
-	// get user
-	function get_user_by_id($id)
-	{
-		$this->db->where('id', $id);
-        $query = $this->db->get('user');
-		return $query->result();
-	}
-	
-	// insert
-	function insert_user($data)
-    {
-    	$data['created'] = date("Y-m-d H:i:s");
-		return $this->db->insert('user', $data);
-	}
 
-	function update($id, $fname, $lname, $contact)
-    {	
-    	$data = array('fname'=>$fname, 'lname'=>$lname, 'contact'=>$contact);
-    	$this->db->where('id', $id);
-		return $this->db->update('user', $data);
-	}
-	public function showcategory()
-	{
-
-		$this->db->order_by("id", "asc");
-		$query=$this->db->get('category');
-		return $query->result();
-	}*/
 
 }?>

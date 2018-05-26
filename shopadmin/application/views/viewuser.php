@@ -88,7 +88,8 @@
 				<th title="Field #2">Client Name</th>
 				<th title="Field #3">Card</th>
 				<th title="Field #4">Contact</th>
-				<th title="Field #5">Email</th>
+				<th title="Field #6">Email</th>
+				<th title="Field #7">Edit</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -99,6 +100,12 @@
 				<td><?php echo $row->u_card;?></td>
 				<td><?php echo $row->u_contact;?></td>
 				<td><?php echo $row->u_mail;?></td>
+				<td><a href="<?php echo base_url();?>index.php/user/user_id/<?php echo $row->u_id;?>" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+						<span>
+							
+							<span>Update</span>
+						</span>
+					</a></td>
 			</tr>
 			<?php }?>
 			</tbody>

@@ -87,6 +87,41 @@ class home extends CI_Controller {
 			}
 
 	}
+	public function user_id($a_id)
+	{   $details=$this->admin->adminbyid($a_id);
+        	    	$data['a_id'] = $details[0]->a_id;
+        			$data['a_username'] = $details[0]->a_username;
+        			$data['a_contact'] = $details[0]->a_contact;
+					$data['a_mail'] = $details[0]->a_mail;
+					
+     			$this->load->view('header');
+				$this->load->view('adminbyid',$data);
+				$this->load->view('footer');
+	}
+	public function update_member($a_id)
+	{	
+
+			$data = array
+			(
+				'a_username' => $this->input->post('a_username'),
+				'a_contact' => $this->input->post('a_contact'),
+				'a_mail' => $this->input->post('a_mail')
+				
+			);
+			
+			if ($this->admin->update_user($a_id,$data))
+			{
+				$this->session->set_flashdata('msg','<div class="">Thanks for sending us your details! Our team will be in touch with you soon.</div>');
+				redirect($_SERVER['HTTP_REFERER']);
+			}
+			else
+			{
+				// error
+				$this->session->set_flashdata('msg','<div class="">Oops! Error.  Please try again later!!!</div>');
+				//redirect($_SERVER['HTTP_REFERER']);
+			}
+		
+	}
 
 	public function toggle_member($a_id,$a_status)
 	{        

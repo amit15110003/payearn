@@ -94,6 +94,7 @@
 				<th title="Field #8">Category</th>
 				<th title="Field #9">Warehouse</th>
 				<th title="Field #11">Status</th>
+				<th title="Field #12">Edit</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -109,6 +110,12 @@
 				<td><?php echo $row->p_category;?></td>
 				<td><?php echo $row->p_warehouse;?></td>
 				<td><?php echo $row->p_status;?></td>
+				<td><a href="<?php echo base_url();?>index.php/product/product_id/<?php echo $row->p_id;?>" class="btn btn-small m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+						<span>
+							
+							<span>Update</span>
+						</span>
+					</a></td>
 			</tr>
 			<?php }?>
 			</tbody>

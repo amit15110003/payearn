@@ -150,12 +150,11 @@ class product extends CI_Controller {
 				'p_sp' => $this->input->post('p_sp'),
 				'p_stock' => $this->input->post('p_stock'),
 				'p_category' => $this->input->post('p_category'),
-
 				'p_status' => $this->input->post('p_status'),
 				'p_image' => $picture
 			);
 			
-			if ($this->productmodal->update_product($data,$p_id))
+			if ($this->productmodal->update_product($p_id,$data))
 			{
 				$this->session->set_flashdata('msg','<div class="">Thanks for sending us your details! Our team will be in touch with you soon.</div>');
 				redirect($_SERVER['HTTP_REFERER']);
