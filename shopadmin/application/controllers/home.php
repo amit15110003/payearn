@@ -68,10 +68,10 @@ class home extends CI_Controller {
             $id=$this->session->userdata('a_id');
 			$data = array
 			(
-				'a_id'=> $id,
-				'm_name' => $this->input->post('m_name'),
-				'm_dscr' => $this->input->post('m_dscr'),
-				'm_status' => $this->input->post('m_status')
+				'a_username' => $this->input->post('a_username'),
+				'a_contact' => $this->input->post('a_contact'),
+				'a_mail' => $this->input->post('a_mail'),
+				'status' => $this->input->post('a_status')
 			);
 			
 			if ($this->admin->add_member($data))
@@ -93,6 +93,8 @@ class home extends CI_Controller {
         			$data['a_username'] = $details[0]->a_username;
         			$data['a_contact'] = $details[0]->a_contact;
 					$data['a_mail'] = $details[0]->a_mail;
+					$data['a_pass'] = $details[0]->a_pass;
+					$data['a_status'] = $details[0]->a_status;
 					
      			$this->load->view('header');
 				$this->load->view('adminbyid',$data);
@@ -105,6 +107,9 @@ class home extends CI_Controller {
 			(
 				'a_username' => $this->input->post('a_username'),
 				'a_contact' => $this->input->post('a_contact'),
+				'a_status' => $this->input->post('a_status'),
+				'a_pass' => $this->input->post('a_pass'),
+				'a_design' => $this->input->post('a_design'),
 				'a_mail' => $this->input->post('a_mail')
 				
 			);

@@ -31,9 +31,15 @@
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
-								<label class="col-lg-2 col-form-label">Address:</label>
+								<label class="col-lg-2 col-form-label">Designation:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="a_add" placeholder="" value="<?php echo $a_add;?>">
+									<input type="text" class="form-control m-input" name="a_design" placeholder="" value="<?php echo $a_design;?>">
+								</div>
+							</div>
+							<div class="m-form__group form-group row">
+								<label class="col-lg-2 col-form-label">Password:</label>
+								<div class="col-lg-6">
+									<input type="Password" class="form-control m-input" name="a_pass" placeholder="" value="<?php echo $a_pass;?>">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">

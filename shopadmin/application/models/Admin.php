@@ -59,13 +59,13 @@ class admin extends CI_Model
 	{
 		return $this->db->insert('admin_login', $data);
 	}
-	function update_member($u_id,$data)
+	function update_member($a_id,$data)
 	{
 		$this->db->where('a_id', $a_id);
 		return $this->db->update('member', $data);
 		
 	}
-	function memberbyid($u_id)
+	function memberbyid($a_id)
 	{
 		$this->db->where('a_id', $a_id);
         $query = $this->db->get('member');
@@ -73,6 +73,12 @@ class admin extends CI_Model
 	}
 
 
+	function toggle_design($a_design,$status)
+	{
+		$this->db->where('a_design', $a_design);
+		$data['status'] = $status;
+		return $this->db->update('admin_login', $data);
+	}
 	function toggle_member($a_id,$status)
 	{
 		$this->db->where('a_id', $a_id);

@@ -83,17 +83,29 @@
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label">Name:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="m_name" placeholder="Member name">
+									<input type="text" class="form-control m-input" name="a_username" placeholder="Member name">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
-								<label class="col-lg-2 col-form-label" for="exampleTextarea">Description:</label>
+								<label class="col-lg-2 col-form-label" for="exampleTextarea">Mail:</label>
 								<div class="col-lg-6">
-									<textarea class="form-control m-input" name="m_dscr" id="exampleTextarea" rows="3"></textarea>
+									<input type="text" class="form-control m-input" name="a_mail" id="exampleTextarea" rows="3"></textarea>
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
-								<label for="exampleSelect1" class="col-lg-2 col-form-label">Designation:</label>
+								<label class="col-lg-2 col-form-label" for="exampleTextarea">Contact:</label>
+								<div class="col-lg-6">
+									<input type="number" class="form-control m-input" name="a_contact" id="exampleTextarea" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="m-form__group form-group row">
+								<label class="col-lg-2 col-form-label" for="exampleTextarea">Password:</label>
+								<div class="col-lg-6">
+									<input type="password" class="form-control m-input" name="a_contac" id="password" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="m-form__group form-group row">
+								<label for="exampleSelect1" class="col-lg-2 col-form-label">Designation</label>
 								<div class="col-lg-6">
 									<select class="form-control m-input" name="a_design" id="exampleSelect1">
 										<option value="Admin">Admin</option>
@@ -105,7 +117,7 @@
 							<div class="m-form__group form-group row">
 								<label for="exampleSelect1" class="col-lg-2 col-form-label">Status:</label>
 								<div class="col-lg-6">
-									<select class="form-control m-input" name="status" id="exampleSelect1">
+									<select class="form-control m-input" name="a_status" id="exampleSelect1">
 										<option value="1">Active</option>
 										<option value="0">Disabled</option>
 									</select>
@@ -147,7 +159,7 @@
 				<td><?php echo $row->a_username;?></td>
 				<td><?php echo $row->a_contact;?></td>
 				<td><?php echo $row->a_mail;?></td>
-				<td><a href="<?php echo base_url();?>index.php/user/user_id/<?php echo $row->u_id;?>" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+				<td><a href="<?php echo base_url();?>index.php/home/members/member_id/<?php echo $row->a_id;?>" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
 						<span>
 							
 							<span>Update</span>
