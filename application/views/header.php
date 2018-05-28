@@ -69,8 +69,25 @@
 											<li><a href="#">Français</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Login</a></li>
-									<li><a href="#">Register</a></li>
+									<?php if ($this->session->userdata('u_name')){ ?>
+								        <li class="dropdown">
+								          <a class=" dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">
+								           <?php echo $result = substr($this->session->userdata('u_name'), 0, 6); ?>
+								          </a>
+								          <ul class="dropdown-menu">
+								            <li><a href="<?php echo base_url("index.php/profile"); ?>">Profile</a></li>
+								            <li><a href="<?php echo base_url("index.php/orders"); ?>" > Orders</a></li>
+								            <li><a href="<?php echo base_url("index.php/wishlist"); ?>"> Wishlist</a></li>
+								            <li><a href="<?php echo base_url("index.php/profile/address"); ?>">Address</a></li>
+								            <li><a href="<?php echo base_url("index.php/profile/account_details"); ?>">Account details</a></li>
+								            <li><a href="<?php echo base_url("index.php/shop/logout"); ?>">Logout</a></li>
+								          </ul>
+								        </li>
+								        <?php } else{?>
+								        <li><a href="<?php echo base_url();?>index.php/login">Login</a></li>
+								        <?php }?>
+									<!--<li><a href="<?php echo base_url();?>index.php/login">Login</a></li>
+									<li><a href="<?php echo base_url();?>index.php/signup">Register</a></li>-->
 								</ul>
 							</div>
 						</div>

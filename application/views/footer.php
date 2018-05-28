@@ -41,10 +41,10 @@
 								<p>
 									Enter your email address for our mailing list to keep yourself updated.
 								</p>
-								<form class="newsletter">
-									<input type="email" name="EMAIL" placeholder="Your email address" required="" />
-									<button><i class="fa fa-paper-plane"></i></button>
-								</form>
+								<div class="newsletter" id="subcribed">
+									<input type="email" id="subemail" placeholder="Your email address" required="" />
+									<button onclick="javascript:subscribe('');"><i class="fa fa-paper-plane"></i></button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -86,5 +86,22 @@
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.migration.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script>
+		         function subscribe() {
+		             var email =document.getElementById("subemail").value;
+		             $.ajax({
+		                 type: 'POST',
+		                 url: '<?php echo base_url(); ?>index.php/shop/subscribe',
+		                 data:'&email='+email,
+		                 beforeSend: function () {
+		                     $('.loading').show();
+		                 },
+		                 success: function (html) {
+		                     $('#subcribed').html(html);
+		                     $('.loading').fadeOut("slow");
+		                 }
+		             });
+		         }
+		</script>
 	</body>
 </html>
