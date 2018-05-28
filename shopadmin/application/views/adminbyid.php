@@ -1,5 +1,5 @@
 <div class="row"><div class="col-lg-12">
-    <!--begin:: Widgets/User Progress -->
+    <!--begin:: Widgets/member Progress -->
 <div class="m-portlet m-portlet--full-height ">
 	<div class="m-portlet__head">
 		<div class="m-portlet__head-caption">
@@ -13,40 +13,40 @@
 	<div class="m-portlet__body">
 			<div class="tab-pane" id="m_widget4_tab3_content">
 				<!--begin::Form-->
-		        <?php $attributes = array("name" => "add_user"); echo form_open_multipart("user/update_user/$u_id", $attributes);?>
+		        <?php $attributes = array("name" => "add_member"); echo form_open_multipart("member/update_member/$a_id", $attributes);?>
 				<div class="m-form m-form--label-align-right">
 					<div class="m-portlet__body">	
-						<input type="hidden" name="u_id" value="<?php echo $u_id;?>">
+						<input type="hidden" name="a_id" value="<?php echo $a_id;?>">
 			            <div class="m-form__section m-form__section--middle">
 							<div class="m-form__group form-group row">
-								<label class="col-lg-2 col-form-label">User Name:</label>
+								<label class="col-lg-2 col-form-label">member Name:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="u_name" placeholder="" value="<?php echo $u_name;?>">
+									<input type="text" class="form-control m-input" name="a_name" placeholder="" value="<?php echo $a_name;?>">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label">Contact:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="u_contact" placeholder="" value="<?php echo $u_contact;?>">
+									<input type="text" class="form-control m-input" name="a_contact" placeholder="" value="<?php echo $a_contact;?>">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label">Address:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="u_add" placeholder="" value="<?php echo $u_add;?>">
+									<input type="text" class="form-control m-input" name="a_add" placeholder="" value="<?php echo $a_add;?>">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label" for="exampleTextarea">Email:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="u_mail" placeholder="" value="<?php echo $u_mail;?>">
+									<input type="text" class="form-control m-input" name="a_mail" placeholder="" value="<?php echo $a_mail;?>">
 								</div></div>
 								
 							
 							<div class="m-form__group form-group row">
 								<label for="exampleSelect1" class="col-lg-2 col-form-label">Status:</label>
 								<div class="col-lg-2">
-									<select class="form-control m-input" name="u_status" id="exampleSelect1">
+									<select class="form-control m-input" name="a_status" id="exampleSelect1">
 										<option value="1">Active</option>
 										<option value="0">Disabled</option>
 									</select>
@@ -72,4 +72,4 @@
 		</div>
 	</div>
 
-<!--end:: Widgets/User Progress -->  </div></div></div>
+<!--end:: Widgets/member Progress -->  </div></div></div>
