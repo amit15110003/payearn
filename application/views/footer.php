@@ -86,6 +86,9 @@
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.migration.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/slider.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.touch-punch.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/price-slider.js"></script>
 		<script>
 		         function subscribe() {
 		             var email =document.getElementById("subemail").value;

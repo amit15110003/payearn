@@ -49,6 +49,39 @@ class user extends CI_Model
 	      return $this->db->insert('delivery', $data);
 	   }
 	}
+	//product
+	function countproduct_category($category)
+	{	
+		$this->db->where('p_category', $category);
+		$this->db->where('p_status', "1");
+		$this->db->select_sum('id');
+	    $this->db->from('product');
+
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
+	public function showproduct_category($limit, $start,$category)
+	{	
+		$this->db->limit($limit, $start);
+		$this->db->where('p_category', $category);
+		$this->db->where('p_status', "1");
+		$query=$this->db->get('product');
+		
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
+	}
 	//subscribe
 	function insert_subscriber($email)
     {$data = array('s_mail'=>$email);

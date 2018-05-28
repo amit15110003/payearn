@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/style.css" type="text/css" media="all"/>
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/custom.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="noo-spinner">

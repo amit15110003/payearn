@@ -11,7 +11,7 @@ class Product extends CI_Controller {
 		$this->load->model('user');
 	}
 
-	public function index($category,$id)
+	public function index($category)
 	{	
 		$details['query']=$this->user->showproduct();
 		$details['category']=$this->user->showcategory();
@@ -21,7 +21,7 @@ class Product extends CI_Controller {
 
 	public function category($category)
 	{	
-		$category = str_replace('%20', ' ', $category);
+		$category = str_replace('%20',' ', $category);
 		$config = array();
         $config["base_url"] = base_url() . "index.php/product/view/$category";
         $config["total_rows"] = $this->user->countproduct_category($category);
@@ -34,9 +34,9 @@ class Product extends CI_Controller {
         $details['query'] = $this->user->showproduct_category($config["per_page"], $page,$category);
         $details["links"] = $this->pagination->create_links();
 		$details['categoryval']=$category;
-		$this->load->view('client/header');
-		$this->load->view('client/category',$details);
-		$this->load->view('client/footer');
+		$this->load->view('header');
+		$this->load->view('category',$details);
+		$this->load->view('footer');
 	}
 
 	public function details($category,$title)
@@ -57,9 +57,9 @@ class Product extends CI_Controller {
         	$data['view'] = $details[0]->view;
         	$view=$data['view']+1;
 		$this->user->updateview($details[0]->id,$view);
-		$this->load->view('client/header',$details);
-		$this->load->view('client/product',$data);
-		$this->load->view('client/footer');
+		$this->load->view('header',$details);
+		$this->load->view('product',$data);
+		$this->load->view('footer');
 	}
 
 	 function viewsort($category){
@@ -87,7 +87,7 @@ class Product extends CI_Controller {
 		{
 			$details['query']=$this->user->sortproduct($category);
 		}
-		$this->load->view('client/category1',$details);
+		$this->load->view('category1',$details);
     }
 
 
