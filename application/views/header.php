@@ -121,9 +121,6 @@
 										<li>
 											<a href="<?php echo base_url();?>">Home</a>
 										</li>
-										<li>
-											<a href="shortcodes.html">Shortcodes</a>
-										</li>
 										<li class="dropdown mega-menu">
 											<a href="#">Shop</a>
 											<ul class="sub-menu">
@@ -134,14 +131,16 @@
 																<div class="pt-4 pb-4">
 																	<h3>Shop Pages</h3>
 																	<ul>
-																		<li><a href="my-account.html">My Account</a></li>
-																		<li><a href="cart-empty.html">Empty Cart</a></li>
-																		<li><a href="cart.html">Cart</a></li>
-																		<li><a href="checkout.html">Check Out</a></li>
-																		<li><a href="wishlist.html">Wishlist</a></li>
-																		<li><a href="shop.html">Shop</a></li>
-																		<li><a href="shop-list.html">Shop List</a></li>
-																		<li><a href="shop-detail.html">Single Product</a></li>
+																		<?php 
+															                $details=$this->user->showcategory();
+															                foreach ($details as $row ) {
+															                  $c_name=str_replace(' ', '-', $row->c_name);?>
+															          <li>
+															            <a href="<?php echo base_url("index.php/product/category/$c_name"); ?>">
+															            <?php echo $row->c_name;?></a>
+															          </li>
+															        <?php }?>
+																		
 																	</ul>
 																</div>
 															</div>
@@ -193,6 +192,9 @@
 											</ul>
 										</li>
 										<li>
+											<a href="shortcodes.html">Card Recharge</a>
+										</li>
+										<li>
 											<a href="<?php echo base_url();?>index.php/shop/contact">Contact</a>
 										</li>
 									</ul>
@@ -200,37 +202,32 @@
 								<div class="btn-wrap">
 									<div class="mini-cart-wrap">
 										<div class="mini-cart">
-											<div class="mini-cart-icon" data-count="2">
+											<a href="<?php echo base_url(""); ?>index.php/cart">
+											<div class="mini-cart-icon" data-count="<?php 
+            if(!empty($this->session->userdata('u_id')))
+            {
+                $detail1=$this->user->countproduct($this->session->userdata('u_id'));
+                    if(!empty($detail1))
+                      { 
+                        echo $detail1; 
+                      }
+                  else{
+                    echo"0";
+                    }
+            }
+            elseif(!empty($this->cart->contents()))
+            {
+              $i=0;
+              $cart = $this->cart->contents();
+              foreach($cart as $items)
+              {
+                $i++;
+              }
+               echo $i;
+            }
+            else{echo"0";} ?>" >
 												<i class="ion-bag"></i>
-											</div>
-										</div>
-										<div class="widget-shopping-cart-content">
-											<ul class="cart-list">
-												<li>
-													<a href="#" class="remove">×</a>
-													<a href="shop-detail.html">
-														<img src="images/shop/thumb/shop_1.jpg" alt="" />
-														Orange Juice&nbsp;
-													</a>
-													<span class="quantity">1 × $12.00</span>
-												</li>
-												<li>
-													<a href="#" class="remove">×</a>
-													<a href="shop-detail.html">
-														<img src="images/shop/thumb/shop_2.jpg" alt="" />
-														Aurore Grape&nbsp;
-													</a>
-													<span class="quantity">1 × $9.00</span>
-												</li>
-											</ul>
-											<p class="total">
-												<strong>Subtotal:</strong> 
-												<span class="amount">$21.00</span>
-											</p>
-											<p class="buttons">
-												<a href="cart.html" class="view-cart">View cart</a>
-												<a href="checkout.html" class="checkout">Checkout</a>
-											</p>
+											</div></a>
 										</div>
 									</div>
 									<div class="top-search-btn-wrap">

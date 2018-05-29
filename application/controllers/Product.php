@@ -39,24 +39,22 @@ class Product extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function details($category,$title)
+	public function details($p_category,$p_name)
 	{	
-		$category = str_replace('%20', ' ', $category);
-		$details=$this->user->get_product_id($category,$title);
-		$data['query']=$this->user->get_image_id($details[0]->id);
-		$data['query1']=$this->user->get_review_id($details[0]->id);
-		$data['query2']=$this->user->showproduct_mostview_cat($category);
-			$data['id'] = $details[0]->id;
-			$data['picture'] = $details[0]->picture;
-			$data['title'] = $details[0]->title;
-        	$data['Descr'] = $details[0]->Descr;
-        	$data['cost'] = $details[0]->cost;
-        	$data['category'] = $details[0]->category;
-        	$data['rate'] = $details[0]->rate;
-        	$data['review'] = $details[0]->review;
-        	$data['view'] = $details[0]->view;
-        	$view=$data['view']+1;
-		$this->user->updateview($details[0]->id,$view);
+		$p_category = str_replace('%20', ' ', $p_category);
+		$details=$this->user->get_product_id($p_category,$p_name);
+		$data['query2']=$this->user->showproduct_mostview_cat($p_category);
+			$data['p_id'] = $details[0]->p_id;
+			$data['p_image'] = $details[0]->p_image;
+			$data['p_name'] = $details[0]->p_name;
+        	$data['p_desc'] = $details[0]->p_desc;
+        	$data['p_cp'] = $details[0]->p_cp;
+        	$data['p_sp'] = $details[0]->p_sp;
+        	$data['p_adddesc'] = $details[0]->p_adddesc;
+        	$data['p_category'] = $details[0]->p_category;
+        	$data['p_view'] = $details[0]->p_view;
+        	$view=$data['p_view']+1;
+		$this->user->updateview($details[0]->p_id,$view);
 		$this->load->view('header',$details);
 		$this->load->view('product',$data);
 		$this->load->view('footer');

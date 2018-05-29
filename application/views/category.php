@@ -21,55 +21,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="category-carousel-2 mb-3" data-auto-play="true" data-desktop="3" data-laptop="3" data-tablet="2" data-mobile="1">
-									<div class="cat-item">
-										<div class="cats-wrap" data-bg-color="#f8c9c2">
-											<a href="#">
-												<img src="images/category/cate_7.png" alt="" />
-												<h2 class="category-title"> 
-													Dried <mark class="count">(6)</mark>
-												</h2>
-											</a>
-										</div>
-									</div>
-									<div class="cat-item">
-										<div class="cats-wrap" data-bg-color="#ebd3c3">
-											<a href="#">
-												<img src="images/category/cate_5.png" alt="" />
-												<h2 class="category-title"> 
-													Fruiy <mark class="count">(5)</mark>
-												</h2>
-											</a>
-										</div>
-									</div>
-									<div class="cat-item">
-										<div class="cats-wrap" data-bg-color="#c6e6f6">
-											<a href="#">
-												<img src="images/category/cate_9.png" alt="" />
-												<h2 class="category-title"> 
-													Juice <mark class="count">(6)</mark>
-												</h2>
-											</a>
-										</div>
-									</div>
-									<div class="cat-item">
-										<div class="cats-wrap" data-bg-color="#e0d1a1">
-											<a href="#">
-												<img src="images/category/cate_6.png" alt="" />
-												<h2 class="category-title"> 
-													Vegetables <mark class="count">(6)</mark>
-												</h2>
-											</a>
-										</div>
-									</div>
-								</div>
 								<div class="product-grid">
 									<?php foreach ($query as $row) {
 				$p_category=str_replace(' ', '-', $row->p_category);
 				$p_name=str_replace(' ', '-', $row->p_name);?>
 									<div class="col-md-4 col-sm-6 product-item text-center mb-3">
 										<div class="product-thumb">
-											<a href="shop-detail.html">
+											<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 												<div class="badges">
 													<span class="hot">Hot</span>
 													<span class="onsale">Sale!</span>
@@ -98,11 +56,12 @@
 									<?php }?>
 								</div>
 								<div class="pagination"> 
-									<a class="prev page-numbers" href="#">Prev</a>
+									<?php echo $links; ?>
+									<!--<a class="prev page-numbers" href="#">Prev</a>
 									<a class="page-numbers" href="#">1</a>
 									<span class="page-numbers current">2</span> 
 									<a class="page-numbers" href="#">3</a> 
-									<a class="next page-numbers" href="#">Next</a>
+									<a class="next page-numbers" href="#">Next</a>-->
 								</div>
 							</div>
 							<div class="col-md-3 col-md-pull-9">
