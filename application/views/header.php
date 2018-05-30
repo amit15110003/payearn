@@ -62,34 +62,7 @@
 						</div>
 						<div class="col-md-6">
 							<div class="topbar-menu">
-								<ul class="topbar-menu">
-									<li class="dropdown">
-										<a href="#">Languages</a>
-										<ul class="sub-menu">
-											<li><a href="#">English</a></li>
-											<li><a href="#">Français</a></li>
-										</ul>
-									</li>
-									<?php if ($this->session->userdata('u_name')){ ?>
-								        <li class="dropdown">
-								          <a class=" dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">
-								           <?php echo $result = substr($this->session->userdata('u_name'), 0, 6); ?>
-								          </a>
-								          <ul class="dropdown-menu">
-								            <li><a href="<?php echo base_url("index.php/profile"); ?>">Profile</a></li>
-								            <li><a href="<?php echo base_url("index.php/orders"); ?>" > Orders</a></li>
-								            <li><a href="<?php echo base_url("index.php/wishlist"); ?>"> Wishlist</a></li>
-								            <li><a href="<?php echo base_url("index.php/profile/address"); ?>">Address</a></li>
-								            <li><a href="<?php echo base_url("index.php/profile/account_details"); ?>">Account details</a></li>
-								            <li><a href="<?php echo base_url("index.php/shop/logout"); ?>">Logout</a></li>
-								          </ul>
-								        </li>
-								        <?php } else{?>
-								        <li><a href="<?php echo base_url();?>index.php/login">Login</a></li>
-								        <?php }?>
-									<!--<li><a href="<?php echo base_url();?>index.php/login">Login</a></li>
-									<li><a href="<?php echo base_url();?>index.php/signup">Register</a></li>-->
-								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -183,7 +156,7 @@
 															</div>
 															<div class="col-sm-3">
 																<div class="pt-4 pb-4">
-																	<img src="images/megamenu_ads.jpg" alt="" />
+																	<img src="<?php echo base_url();?>media/images/megamenu_ads.jpg" alt="" />
 																</div>
 															</div>
 														</div>
@@ -192,10 +165,26 @@
 											</ul>
 										</li>
 										<li>
-											<a href="shortcodes.html">Card Recharge</a>
+											<a href="<?php echo base_url();?>index.php/shop/recharge">Card Recharge</a>
 										</li>
-										<li>
-											<a href="<?php echo base_url();?>index.php/shop/contact">Contact</a>
+										<li class="dropdown">
+											<?php if ($this->session->userdata('u_name')){ ?>
+								         
+								          <a style="text-transform: uppercase;">
+								           <?php echo $result = substr($this->session->userdata('u_name'), 0, 6); ?>
+								          </a>
+								          <ul class="sub-menu">
+								            <li><a href="<?php echo base_url("index.php/profile"); ?>">Profile</a></li>
+								            <li><a href="<?php echo base_url("index.php/orders"); ?>" > Orders</a></li>
+								            <li><a href="<?php echo base_url("index.php/wishlist"); ?>"> Wishlist</a></li>
+								            <li><a href="<?php echo base_url("index.php/profile/address"); ?>">Address</a></li>
+								            <li><a href="<?php echo base_url("index.php/profile/account_details"); ?>">Account details</a></li>
+								            <li><a href="<?php echo base_url("index.php/shop/logout"); ?>">Logout</a></li>
+								          </ul>
+								        </li>
+								        <?php } else{?>
+								        <li><a href="<?php echo base_url();?>index.php/login">Login</a></li>
+								        <?php }?>
 										</li>
 									</ul>
 								</nav>

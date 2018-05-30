@@ -14,14 +14,21 @@ class Shop extends CI_Controller {
 	}
 	public function index()
 	{
+		$details['query']=$this->user->showproduct_mostview_cat();
 		$this->load->view('header');
-		$this->load->view('index');
+		$this->load->view('index',$details);
 		$this->load->view('footer');
 	}
 	public function about()
 	{
 		$this->load->view('header');
 		$this->load->view('about');
+		$this->load->view('footer');
+	}
+	public function recharge()
+	{
+		$this->load->view('header');
+		$this->load->view('recharge');
 		$this->load->view('footer');
 	}
 	public function contact()

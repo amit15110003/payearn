@@ -2,9 +2,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="images/footer_logo.png" class="footer-logo" alt="" />
+							<img src="<?php echo base_url();?>media/img/logow.png" class="footer-logo" alt="" />
 							<p>
-								Welcome to Organik. Our products are freshly harvested, washed ready for box and finally delivered from our family farm right to your doorstep.
+								Welcome to Pay & Earn. Our products hhave wide brand range, quantity ready for box and finally delivered from our warehouse  right to your doorstep.
 							</p>
 							<div class="footer-social">
 								<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
