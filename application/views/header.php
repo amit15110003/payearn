@@ -239,7 +239,7 @@
 						<div class="col-xs-8">
 							<div class="header-center">
 								<a href="index.html" id="logo-2">
-									<img class="logo-image" src="images/logo.png" alt="Organik Logo" />
+									<img class="logo-image" src="media/img/logoxsm.png" alt="Organik Logo" />
 								</a>
 							</div>
 						</div>

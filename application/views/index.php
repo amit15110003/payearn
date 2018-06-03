@@ -2,53 +2,10 @@
 				<div class="section">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-12 p-0">
-								<div id="rev_slider" class="rev_slider fullscreenbanner">
-									<ul>
-										<li data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide"> 
-											<img src="<?php echo base_url();?>media/images/slider/slide_bg_6.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" />
-											<div class="tp-caption" data-x="center" data-hoffset=""
-												 data-y="center" data-voffset=""
-												 data-width="['none','none','none','none']"
-												 data-height="['none','none','none','none']"
-												 data-type="image" data-responsive_offset="on"
-												 data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-												 data-textAlign="['inherit','inherit','inherit','inherit']"
-												 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
-												 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-												 	<img src="<?php echo base_url();?>media/images/slider/slide_9.png" alt="" />
-											</div>
-											<div class="tp-caption floating"
-												 data-x="center" data-hoffset="68"
-												 data-y="center" data-voffset="-11"
-												 data-width="['none','none','none','none']"
-												 data-height="['none','none','none','none']"
-												 data-type="image"
-												 data-responsive_offset="on" data-frames='[{"delay":360,"speed":300,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-												 data-textAlign="['inherit','inherit','inherit','inherit']"
-												 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
-												 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-												 	<img src="<?php echo base_url();?>media/images/slider/slide_10.png" alt="" />
-											</div>
-											<div class="tp-caption GreatVibes-48"
-												 data-x="center" data-hoffset="-322"
-												 data-y="center" data-voffset="-128"
-												 data-width="['auto']" data-height="['auto']"
-												 data-type="text" data-responsive_offset="on"
-												 data-frames='[{"delay":690,"speed":300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-												 data-textAlign="['left','left','left','left']">Summer season
-											</div>
-											<div class="tp-caption Lato-16-900 uppercase ls-3"
-												 data-x="center" data-hoffset="375"
-												 data-y="center" data-voffset="40"
-												 data-width="['auto']" data-height="['auto']"
-												 data-type="text" data-responsive_offset="on"
-												 data-frames='[{"delay":1010,"speed":300,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-												 data-textAlign="['left','left','left','left']">trust the nature
-											</div>
-										</li>
-									</ul>
-								</div>
+							<div class="col-sm-12 col-md-12 p-0">
+								
+									<img src="<?php echo base_url();?>media/images/slider/11.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" />
+											
 							</div>
 						</div>
 					</div>
