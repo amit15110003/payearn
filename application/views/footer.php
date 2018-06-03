@@ -2,9 +2,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5">
-							<img src="images/footer_logo.png" class="footer-logo" alt="" />
+							<img src="<?php echo base_url();?>media/img/logow.png" class="footer-logo" alt="" />
 							<p>
-								Welcome to Organik. Our products are freshly harvested, washed ready for box and finally delivered from our family farm right to your doorstep.
+								Welcome to Pay & Earn. Our products hhave wide brand range, quantity ready for box and finally delivered from our warehouse  right to your doorstep.
 							</p>
 							<div class="footer-social">
 								<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -41,10 +41,10 @@
 								<p>
 									Enter your email address for our mailing list to keep yourself updated.
 								</p>
-								<form class="newsletter">
-									<input type="email" name="EMAIL" placeholder="Your email address" required="" />
-									<button><i class="fa fa-paper-plane"></i></button>
-								</form>
+								<div class="newsletter" id="subcribed">
+									<input type="email" id="subemail" placeholder="Your email address" required="" />
+									<button onclick="javascript:subscribe('');"><i class="fa fa-paper-plane"></i></button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery-migrate.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/modernizr-2.7.1.min.js"></script>
@@ -86,5 +86,25 @@
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.migration.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/slider.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.ui.touch-punch.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/price-slider.js"></script>
+		<script>
+		         function subscribe() {
+		             var email =document.getElementById("subemail").value;
+		             $.ajax({
+		                 type: 'POST',
+		                 url: '<?php echo base_url(); ?>index.php/shop/subscribe',
+		                 data:'&email='+email,
+		                 beforeSend: function () {
+		                     $('.loading').show();
+		                 },
+		                 success: function (html) {
+		                     $('#subcribed').html(html);
+		                     $('.loading').fadeOut("slow");
+		                 }
+		             });
+		         }
+		</script>
 	</body>
 </html>
