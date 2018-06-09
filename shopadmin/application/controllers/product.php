@@ -45,7 +45,7 @@ class product extends CI_Controller {
                           'source_image' => $uploadData['full_path'], //get original image
                           'new_image' => $this->gallery_path.'/thumb/', //save as new image //need to create thumbs first
                           'maintain_ratio' => TRUE,
-                          'width' => 400
+                          'height' => 300
                            
                         );
                         $this->load->library('image_lib', $config1); //load library
@@ -118,7 +118,7 @@ class product extends CI_Controller {
                           'source_image' => $uploadData['full_path'], //get original image
                           'new_image' => $this->gallery_path.'/thumb/', //save as new image //need to create thumbs first
                           'maintain_ratio' => TRUE,
-                          'width' => 400
+                          'height' => 300
                            
                         );
                         $this->load->library('image_lib', $config1); //load library

@@ -74,7 +74,13 @@
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/imagesloaded.pkgd.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/isotope.pkgd.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.isotope.init.js"></script>
+
+		<script type='text/javascript' src='<?php echo base_url();?>media/js/slick.min.js'></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/script.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/modernizr-2.7.1.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>media/js/owl.carousel.min.js"></script>
+		<script type='text/javascript' src='<?php echo base_url();?>media/js/jquery.prettyPhoto.js'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>media/js/jquery.prettyPhoto.init.min.js'></script>
 
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.themepunch.tools.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.themepunch.revolution.min.js"></script>

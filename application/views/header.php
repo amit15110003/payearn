@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/owl.carousel.css" type="text/css" media="all"/>
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/owl.theme.css" type="text/css" media="all"/>
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/settings.css" type="text/css" media="all"/>
+		<link rel='stylesheet' href='<?php echo base_url();?>media/css/slick.css' type='text/css' media='all'/>
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/style.css" type="text/css" media="all"/>
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/custom.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
@@ -214,7 +215,29 @@
               }
                echo $i;
             }
-            else{echo"0";} ?>" >
+            else{echo"0";} ?>" ><span  id="cartcounter" class="hidden"><?php 
+            if(!empty($this->session->userdata('u_id')))
+            {
+                $detail1=$this->user->countproduct($this->session->userdata('u_id'));
+                    if(!empty($detail1))
+                      { 
+                        echo $detail1; 
+                      }
+                  else{
+                    echo"0";
+                    }
+            }
+            elseif(!empty($this->cart->contents()))
+            {
+              $i=0;
+              $cart = $this->cart->contents();
+              foreach($cart as $items)
+              {
+                $i++;
+              }
+               echo $i;
+            }
+            else{echo"0";} ?></span>
 												<i class="ion-bag"></i>
 											</div></a>
 										</div>
@@ -242,8 +265,8 @@
 						</div>
 						<div class="col-xs-8">
 							<div class="header-center">
-								<a href="index.html" id="logo-2">
-									<img class="logo-image" src="media/img/logoxsm.png" alt="Organik Logo" />
+								<a href="<?php echo base_url();?>" id="logo-2">
+									<img class="logo-image" src="<?php echo base_url();?>media/img/logoxsm.png" alt="Organik Logo" />
 								</a>
 							</div>
 						</div>
@@ -252,7 +275,29 @@
 								<div class="mini-cart-wrap">
 									<a href="cart.html">
 										<div class="mini-cart">
-											<div class="mini-cart-icon" data-count="2">
+											<div class="mini-cart-icon" data-count="<?php 
+            if(!empty($this->session->userdata('u_id')))
+            {
+                $detail1=$this->user->countproduct($this->session->userdata('u_id'));
+                    if(!empty($detail1))
+                      { 
+                        echo $detail1; 
+                      }
+                  else{
+                    echo"0";
+                    }
+            }
+            elseif(!empty($this->cart->contents()))
+            {
+              $i=0;
+              $cart = $this->cart->contents();
+              foreach($cart as $items)
+              {
+                $i++;
+              }
+               echo $i;
+            }
+            else{echo"0";} ?>">
 												<i class="ion-bag"></i>
 											</div>
 										</div>
