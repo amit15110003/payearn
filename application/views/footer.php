@@ -7,7 +7,7 @@
 								Welcome to Pay & Earn. Our products hhave wide brand range, quantity ready for box and finally delivered from our warehouse  right to your doorstep.
 							</p>
 							<div class="footer-social">
-								<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+								<a href="https://www.facebook.com/paynearn" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
 								<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
 								<a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
 								<a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
