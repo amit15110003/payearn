@@ -173,101 +173,282 @@
 						</div>
 					</div>
 				</div>
-				<div class="section section-bg-4 pt-9 pb-12">
+				<div class="section pt-9 pb-8">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="text-center mb-1 section-pretitle">Hot deal</div>
-								<h2 class="text-center section-title mtn-2">Deal of the day</h2>
-								<div class="organik-seperator mb-9 center">
-									<span class="sep-holder"><span class="sep-line"></span></span>
-									<div class="sep-icon"><i class="organik-flower"></i></div>
-									<span class="sep-holder"><span class="sep-line"></span></span>
+							<div class="col-md-4 col-sm-12">
+								<div class="organik-featured-product" data-bg-color="#e7f2d8" data-bg-image="<?php echo base_url();?>media/images/featured_product.png">
+									<div class="organik-featured-product-box">
+										<h3 class="title">Fresh fruits</h3>
+										<h1 class="subtitle">More offers for May</h1>
+										<a class="organik-btn small" href="#">Shop now</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="mt-6"></div>
-								<div class="organik-product-spot type-left">
-									<div class="info">
-										<div class="title">Healthy Died</div>
-										<div class="content">Maecenas tristique gravida, odio et sagi ttis justo endisse ultricies niaie</div>
-									</div>
-									<div class="icon">
-										<div class="icon-inner">
-											<i class="organik-carrot"></i>
-											<div class="spot">
-												<div class="spot-inner"></div>
+							<div class="col-md-4 col-sm-6">
+								<div class="organik-product-column">
+									<h2 class="title">Top Rated</h2>
+									<div class="product-slider">
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_9.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Tomato</a></span>
+													<div class="product-price">$20.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_5.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Carrot</a></span>
+													<div class="product-price">$9.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_10.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Carrot Juice</a></span>
+													<div class="product-price">$35.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_8.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Tieton Cherry</a></span>
+													<div class="product-price">$9.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_11.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Beetroot Juice</a></span>
+													<div class="product-price">$35.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_12.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Seville Orange</a></span>
+													<div class="product-price">$3.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_13.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Tropical Twist</a></span>
+													<div class="product-price">$20.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_14.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Banana Marshmallow</a></span>
+													<div class="product-price">$12.00</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_15.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Almonds</a></span>
+													<div class="product-price">
+														<del>$15.00</del> 
+														<ins>$12.00</ins>
+													</div>
+													<div class="product-rate">
+														<div class="star-rating">
+															<span style="width:100%;"></span>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="mt-12"></div>
-								<div class="section-pretitle fz-35 mb-2">Information</div>
-								<div class="organik-product-info">
-									<div class="item">
-										<div class="name">Categories</div>
-										<div class="value">Vegetable / Package</div>
-									</div>
-									<div class="item">
-										<div class="name">Weight</div>
-										<div class="value">5.8kg/package</div>
-									</div>
-									<div class="item">
-										<div class="name">Expire date</div>
-										<div class="value">01/11/2018</div>
-									</div>
-								</div>
 							</div>
-							<div class="col-sm-6">
-								<div class="text-center">
-									<img src="<?php echo base_url();?>media/images/deal_of_day.png" alt="" />
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="mt-4"></div>
-								<div class="organik-product-spot type-right">
-									<div class="info">
-										<div class="title">Safe From Pesticides</div>
-										<div class="content">Maecenas tristique gravida, odio et sagi ttis justo endisse ultricies niaie</div>
-									</div>
-									<div class="icon">
-										<div class="icon-inner">
-											<i class="organik-lemon"></i>
-											<div class="spot">
-												<div class="spot-inner"></div>
+							<div class="col-md-4 col-sm-6">
+								<div class="organik-product-column">
+									<h2 class="title">Best Seller</h2>
+									<div class="product-slider">
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_14.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Banana Marshmallow</a></span>
+													<div class="product-price">$12.00</div>
+													<div class="product-categories">
+														<a href="#">Dried</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_5.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Cucumber</a></span>
+													<div class="product-price">$18.00</div>
+													<div class="product-categories">
+														<a href="#">Vegetables</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_17.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Corn Flour</a></span>
+													<div class="product-price">$15.00</div>
+													<div class="product-categories">
+														<a href="#">Dried</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_11.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Beetroot Juice</a></span>
+													<div class="product-price">$35.00</div>
+													<div class="product-categories">
+														<a href="#">Juice</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_12.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Seville Orange</a></span>
+													<div class="product-price">$3.00</div>
+													<div class="product-categories">
+														<a href="#">Fruits</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_9.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Tomato</a></span>
+													<div class="product-price">$20.00</div>
+													<div class="product-categories">
+														<a href="#">Vegetables</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="slider">
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_2.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Aurore Grape</a></span>
+													<div class="product-price">$9.00</div>
+													<div class="product-categories">
+														<a href="#">Fruits</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_2.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Sienevyi Pomegranate</a></span>
+													<div class="product-price">$3.00</div>
+													<div class="product-categories">
+														<a href="#">Fruits</a>
+													</div>
+												</div>
+											</div>
+											<div class="product-item">
+												<div class="product-thumb">
+													<img src="<?php echo base_url();?>media/images/shop/shop_1.jpg" alt="" />
+												</div>
+												<div class="product-info">
+													<span class="product-title"><a href="shop-detail.html">Orange Juice</a></span>
+													<div class="product-price">
+														<del>$15.00</del> 
+														<ins>$12.00</ins>
+													</div>
+													<div class="product-categories">
+														<a href="#">Juice</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="mt-12"></div>
-								<div class="organik-product-spot type-right">
-									<div class="info">
-										<div class="title">Always Fresh</div>
-										<div class="content">Maecenas tristique gravida, odio et sagi ttis justo endisse ultricies niaie</div>
-									</div>
-									<div class="icon">
-										<div class="icon-inner">
-											<i class="organik-lettuce"></i>
-											<div class="spot">
-												<div class="spot-inner"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="mt-12"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="text-center mt-6">
-									<div class="countdown-wrap mb-4">
-										<div class="countdown-content">
-											<div class="pl-clock countdown-bar color-primary" data-time="2017/10/10"></div>
-										</div>
-									</div>
-									<a class="organik-btn brown" href="#">Shop Now</a>
 								</div>
 							</div>
 						</div>

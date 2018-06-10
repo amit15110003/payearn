@@ -95,6 +95,9 @@
 										<li>
 											<a href="<?php echo base_url();?>">Home</a>
 										</li>
+										<li>
+											<a href="<?php echo base_url();?>index.php/shop/about">About Us</a>
+										</li>
 										<li class="dropdown mega-menu">
 											<a href="#">Shop</a>
 											<ul class="sub-menu">
