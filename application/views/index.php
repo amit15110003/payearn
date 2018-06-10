@@ -161,14 +161,14 @@
 				<div class="section">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-3 p-0">
-								<img src="<?php echo base_url();?>media/images/image_1.jpg" alt="" />
+							<div class="col-sm-4 p-0" >
+								<img src="<?php echo base_url();?>media/images/spices.jpg" alt="" />
 							</div>
-							<div class="col-sm-6 p-0">
-								<img src="<?php echo base_url();?>media/images/image_2.jpg" alt="" />
+							<div class="col-sm-4 p-0" >
+								<img src="<?php echo base_url();?>media/images/boost.jpg" alt="" />
 							</div>
-							<div class="col-sm-3 p-0">
-								<img src="<?php echo base_url();?>media/images/image_3.jpg" alt="" />
+							<div class="col-sm-4 p-0">
+								<img src="<?php echo base_url();?>media/images/aata.jpg" alt="" />
 							</div>
 						</div>
 					</div>
