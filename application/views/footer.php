@@ -53,11 +53,14 @@
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8">
-							Copyright © 2017 <a href="#">Organic Store</a> - All Rights Reserved.
+						<div class="col-md-8" >
+							Copyright © 2018 <a href="<?php echo base_url();?>">Pay & Earn</a> - All Rights Reserved.
 						</div>
 						<div class="col-md-4">
-							<img src="images/footer_payment.png" alt="" />
+							<img src="<?php echo base_url();?>media/images/footer_payment.png" alt="" />
+						</div>
+						<div class="col-md-12" style="text-align: center;" >
+							Powered By <a href="http://trixno.com/">Trixno</a> 
 						</div>
 					</div>
 				</div>
