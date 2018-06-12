@@ -29,21 +29,7 @@
 			<div class="mobile-menu">
 				<ul id="mobile-menu" class="menu">
 					<li>
-						<a href="#">Home</a>
-					</li>
-					<li class="dropdown">
-						<a href="#">Shop</a>
-						<i class="sub-menu-toggle fa fa-angle-down"></i>
-						<ul class="sub-menu">
-							<li><a href="my-account.html">My Account</a></li>
-							<li><a href="cart-empty.html">Empty Cart</a></li>
-							<li><a href="cart.html">Cart</a></li>
-							<li><a href="checkout.html">Check Out</a></li>
-							<li><a href="wishlist.html">Wishlist</a></li>
-							<li><a href="shop.html">Shop</a></li>
-							<li><a href="shop-list.html">Shop List</a></li>
-							<li><a href="shop-detail.html">Single Product</a></li>
-						</ul>
+						<a href="<?php echo base_url();?>">Home</a>
 					</li>
 					<li>
 						<a href="<?php echo base_url();?>shop/contact">Contact</a>

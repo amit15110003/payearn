@@ -19,8 +19,7 @@
 								<ul>
 									<li><a href="#">New Products</a></li>
 									<li><a href="#">Top Sellers</a></li>
-									<li><a href="#">Our Blog</a></li>
-									<li><a href="#">About Our Shop</a></li>
+									<li><a href="<?php echo base_url();?>index.php/shop/about">About Our Shop</a></li>
 								</ul>
 							</div>
 						</div>
@@ -31,7 +30,7 @@
 									<li><a href="#">Our Team</a></li>
 									<li><a href="#">Our Blog</a></li>
 									<li><a href="#">About Us</a></li>
-									<li><a href="#">Secure Shopping</a></li>
+									<li><a href="<?php echo base_url();?>index.php/shop/contact">Contact</a></li>
 								</ul>
 							</div>
 						</div>
