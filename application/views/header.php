@@ -17,14 +17,10 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/custom.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
+
+		<link rel='stylesheet' href='<?php echo base_url();?>media/css/prettyPhoto.css' type='text/css' media='all'/>
 	</head>
 	<body>
-		<div class="noo-spinner">
-			<div class="spinner">
-				<div class="cube1"></div>
-				<div class="cube2"></div>
-			</div>
-		</div>
 		<div id="menu-slideout" class="slideout-menu hidden-md-up">
 			<div class="mobile-menu">
 				<ul id="mobile-menu" class="menu">
@@ -38,7 +34,7 @@
 			</div>
 		</div>
 		<div class="site">
-			<div class="topbar">
+			<div class="topbar hidden-xs">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
