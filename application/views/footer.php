@@ -43,6 +43,7 @@
 									<li><a href="#">About Us</a></li>
 									<li><a href="#">Secure Shopping</a></li>
 >>>>>>> parent of 83e840f... fvf
+									<li><a href="#">Secure Shopping</a></li>
 								</ul>
 							</div>
 						</div>
