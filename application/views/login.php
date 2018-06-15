@@ -30,28 +30,6 @@
 				</div>
 			</header>
 			<div id="main">
-				<div class="section section-bg-10 pt-11 pb-17">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<h2 class="page-title text-center">My Account</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section border-bottom pt-2 pb-2">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<ul class="breadcrumbs">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="shortcodes.html">Shop</a></li>
-									<li>My Account</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="section pt-7 pb-7">
 					<div class="container">
 						<div class="row">
