@@ -37,6 +37,24 @@ class Shop extends CI_Controller {
 		$this->load->view('contact');
 		$this->load->view('footer');
 	}
+	public function privacy()
+	{
+		$this->load->view('header');
+		$this->load->view('privacy');
+		$this->load->view('footer');
+	}
+	public function terms()
+	{
+		$this->load->view('header');
+		$this->load->view('terms');
+		$this->load->view('footer');
+	}
+	public function career()
+	{
+		$this->load->view('header');
+		$this->load->view('career');
+		$this->load->view('footer');
+	}
 	public function subscribe()
     {
     	$email = $this->input->post("email");
