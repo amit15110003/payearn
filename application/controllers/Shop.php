@@ -31,6 +31,24 @@ class Shop extends CI_Controller {
 		$this->load->view('recharge');
 		$this->load->view('footer');
 	}
+	public function terms()
+	{
+		$this->load->view('header');
+		$this->load->view('terms');
+		$this->load->view('footer');
+	}
+	public function privacy()
+	{
+		$this->load->view('header');
+		$this->load->view('privacy');
+		$this->load->view('footer');
+	}
+	public function carrer()
+	{
+		$this->load->view('header');
+		$this->load->view('carrer');
+		$this->load->view('footer');
+	}
 	public function contact()
 	{
 		$this->load->view('header');

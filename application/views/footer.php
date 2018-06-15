@@ -20,6 +20,7 @@
 									<li><a href="#">New Products</a></li>
 									<li><a href="#">Top Sellers</a></li>
 									<li><a href="<?php echo base_url();?>index.php/shop/about">About Our Shop</a></li>
+									<li><a href="#">Our Team</a></li>
 								</ul>
 							</div>
 						</div>
@@ -27,23 +28,12 @@
 							<div class="widget">
 								<h3 class="widget-title">Useful Link</h3>
 								<ul>
-									<li><a href="#">Our Team</a></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
+									
 									<li><a href="<?php echo base_url();?>index.php/shop/privacy">Privacy Policy</a></li>
 									<li><a href="<?php echo base_url();?>index.php/shop/terms">Terms & Conditions</a></li>
 									<li><a href="<?php echo base_url();?>index.php/shop/career">Career</a></li>
-=======
-									<li><a href="#">Our Blog</a></li>
-									<li><a href="#">About Us</a></li>
 									<li><a href="<?php echo base_url();?>index.php/shop/contact">Contact</a></li>
->>>>>>> d24172fd5556431d842e241388f6eecc43b68d7b
-=======
-									<li><a href="#">Our Blog</a></li>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Secure Shopping</a></li>
->>>>>>> parent of 83e840f... fvf
-									<li><a href="#">Secure Shopping</a></li>
+									
 								</ul>
 							</div>
 						</div>
