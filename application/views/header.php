@@ -17,15 +17,33 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>media/css/custom.css" type="text/css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
 		<script type="text/javascript" src="<?php echo base_url();?>media/js/jquery.min.js"></script>
-
-		<link rel='stylesheet' href='<?php echo base_url();?>media/css/prettyPhoto.css' type='text/css' media='all'/>
 	</head>
 	<body>
+		<div class="noo-spinner">
+			<div class="spinner">
+				<div class="cube1"></div>
+				<div class="cube2"></div>
+			</div>
+		</div>
 		<div id="menu-slideout" class="slideout-menu hidden-md-up">
 			<div class="mobile-menu">
 				<ul id="mobile-menu" class="menu">
 					<li>
-						<a href="<?php echo base_url();?>">Home</a>
+						<a href="#">Home</a>
+					</li>
+					<li class="dropdown">
+						<a href="#">Shop</a>
+						<i class="sub-menu-toggle fa fa-angle-down"></i>
+						<ul class="sub-menu">
+							<li><a href="my-account.html">My Account</a></li>
+							<li><a href="cart-empty.html">Empty Cart</a></li>
+							<li><a href="cart.html">Cart</a></li>
+							<li><a href="checkout.html">Check Out</a></li>
+							<li><a href="wishlist.html">Wishlist</a></li>
+							<li><a href="shop.html">Shop</a></li>
+							<li><a href="shop-list.html">Shop List</a></li>
+							<li><a href="shop-detail.html">Single Product</a></li>
+						</ul>
 					</li>
 					<li>
 						<a href="<?php echo base_url();?>shop/contact">Contact</a>
@@ -34,7 +52,7 @@
 			</div>
 		</div>
 		<div class="site">
-			<div class="topbar hidden-xs">
+			<div class="topbar">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">

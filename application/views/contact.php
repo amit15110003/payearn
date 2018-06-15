@@ -1,10 +1,21 @@
 				<div class="section pt-10 pb-10">
 					<div class="container">
-						<!--<div class="row">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="text-center mb-1 section-pretitle">Get in touch</div>
+								<h2 class="text-center section-title mtn-2">HEALTHY ORGANIC FARM</h2>
+								<div class="organik-seperator mb-6 center">
+									<span class="sep-holder"><span class="sep-line"></span></span>
+									<div class="sep-icon"><i class="organik-flower"></i></div>
+									<span class="sep-holder"><span class="sep-line"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-sm-12">
 								<div id="googleMap" class="mb-6" data-icon="images/icon_location.png" data-lat="37.789133" data-lon="-122.402158"></div>
 							</div>
-						</div>-->
+						</div>
 						<div class="row">
 							<div class="col-sm-3">
 								<div class="contact-info">
@@ -14,9 +25,9 @@
 									<div class="contact-inner">
 										<h6 class="contact-title"> Address</h6>
 										<div class="contact-content">
-											Sadatpur Ext. Pusta area &amp; E
+											1800 Abbot Kinney Blvd. Unit D &amp; E
 											<br />
-											East Delhi, 110094
+											Venice, CA 90291
 										</div>
 									</div>
 								</div>
@@ -29,7 +40,7 @@
 									<div class="contact-inner">
 										<h6 class="contact-title"> Hotline</h6>
 										<div class="contact-content">
-											+91 7549490959
+											0122 333 8889
 										</div>
 									</div>
 								</div>
@@ -42,9 +53,9 @@
 									<div class="contact-inner">
 										<h6 class="contact-title"> Email Contact</h6>
 										<div class="contact-content">
-											payearn88@gmail.com
+											organik@gmail.com
 											<br />
-											contact@pay-earn.co.in
+											contact@organikstore.com
 										</div>
 									</div>
 								</div>
@@ -57,7 +68,7 @@
 									<div class="contact-inner">
 										<h6 class="contact-title"> Website</h6>
 										<div class="contact-content">
-											www.pay-earn.co.in
+											www.organikstore.com
 										</div>
 									</div>
 								</div>

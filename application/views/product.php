@@ -38,7 +38,7 @@
 												<div class="quantity-chooser">
 													<div class="quantity">
 														<span class="qty-minus" data-min="1"><i class="ion-ios-minus-outline"></i></span>
-														<input type="text" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" id="itemqty1">
+														<input type="text" name="quantity" value="1" title="Qty" class="input-text qty text" id="itemqty" size="4">
 														<span class="qty-plus" data-max=""><i class="ion-ios-plus-outline"></i></span>
 													</div>
 												</div><?php if(!empty($this->session->userdata('u_id'))){?>
@@ -104,8 +104,7 @@
 <script type="text/javascript">
       function cartadd(id)
       { 
-        var qty = $("#itemqty1").val();
-        alert(qty);
+        var qty = $("itemqty").val();
         $.ajax({  
                      type: "POST",
                       url: "<?php echo site_url('cart/cartadd');?>",
@@ -120,8 +119,7 @@
       function cartadd1(id)
       { 
         var x = document.getElementById("cartcounter").innerHTML;
-        var qty = $("#itemqty1").val();
-        alert(qty);
+        var qty = $("itemqty").val();
         $.ajax({  
                      type: "POST",
                       url: "<?php echo site_url('cart/cartadd1');?>",

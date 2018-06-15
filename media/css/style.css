@@ -5355,14 +5355,14 @@ header.header-4 .mini-cart-wrap .mini-cart .mini-cart-icon {
 	font-weight: 700;
 	text-decoration: none;
 }
-.single-product .cart {
+.single-product form.cart {
     margin-bottom: 20px;
     padding: 30px 0 0 0;
     border-width: 1px 0 0 0;
     border-style: solid;
     border-color: #f1eeea;
 }
-.single-product .cart .quantity {
+.single-product form.cart .quantity {
     max-width: 120px;
     height: 40px;
     line-height: 1;
@@ -5376,14 +5376,14 @@ header.header-4 .mini-cart-wrap .mini-cart .mini-cart-icon {
 	float: left;
     margin: 0 10px 0 0;
 }
-.single-product .cart .quantity span {
+.single-product form.cart .quantity span {
     float: left;
     cursor: pointer;
 }
-.single-product .cart .quantity span i {
+.single-product form.cart .quantity span i {
     font-size: 18px;
 }
-.single-product .cart .qty {
+.single-product form.cart .qty {
 	float: left;
     border: 0;
     line-height: 1;
