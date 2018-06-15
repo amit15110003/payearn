@@ -43,10 +43,10 @@ class Shop extends CI_Controller {
 		$this->load->view('privacy');
 		$this->load->view('footer');
 	}
-	public function carrer()
+	public function career()
 	{
 		$this->load->view('header');
-		$this->load->view('carrer');
+		$this->load->view('career');
 		$this->load->view('footer');
 	}
 	public function contact()

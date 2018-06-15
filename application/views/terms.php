@@ -11,53 +11,50 @@
 									<div class="sep-icon"><i class="organik-flower"></i></div>
 									<span class="sep-holder"><span class="sep-line"></span></span>
 								</div>
-								<p class="text-center">
-									We work to make your lifestyle easy and comfortable, for your
-									development and emergency to save your time, money and effort. We
-									serve customers request for household and other essential
-									commodities by providing home delivery by just attending their
-									precious call.
-									<br />
-									<br />
-								</p>
-								<p class="text-center">
-									To make it more convenient, we have come up with online website
-									‘PAY & EARN’. For this our customer only needs to place order from
-									registered Mobile Number. It is very reliable for old and elderly people.
-									Customers needs to buy ‘PAY & EARN Membership CARD’ by which the
-									transaction takes place. It is easy rechargeable both ONLINE and
-									OFFLINE.
+								<p class="text">
+											To use this site, the set terms and conditions are required to be followed. You are requested to read them carefully. Also, please make note that in order to become an authorized user and use the services provided on Pay&earn, the registration process is required to be completed as per the pre-fixed form in the website.<br><br>
 
-									<p class="text">
-										• It is essential to buy card for PAY & EARN membership.<br>
-										• Card cost 100 rupees + recharge (as per wish and need of
-										customer)<br>
-										• Card validity – 1yr<br>
-										• Mobile number essential for buying Card<br>
-										• Request for orders will only be accepted form registered mobile
-										number.<br>
-										• Orders are accepted 24*7<br>
-										• Delivery timing- 10 a.m. <br>
-										 		-1 p.m.<br>
-										 		-3 p.m.<br>
-										• Card can be recharged both online and offline<br>
-										• At the time of delivery, it is necessary to mention the following on
-										the register carried by delivery boy.<br>
-										 -Name of the customer<br>
-										 -signature of the receiver<br>
-										 -mobile number<br>
-										 - card number<br>
-										• In case Card or registered mobile number is lost report
-										immediately to the office<br>
-										• If any emergency occurs delivery can be delayed to next day<br>
-										• Minimum order of rupees 100 accepted<br>
-										• Cancelation of order can be done by registered mobile number by
-										giving a valid reason. <br>
-										• Old and elderly are greatly benefitted <br>
-										• On shopping of rupees 1000 and more, loyalty card points will be
-										provided which will later turn in cash. <br>
-									</p>	
+											<b>Website Use</b><br><br>
+
+											The information given here defines the terms and conditions of this Website. It gives details about various products and services offered.  By browsing the site you agree to the terms and conditions of the site and the same binds you. You also agree to comply with the applicable law not to transmit the information in accordance with the terms and conditions. You agree not to make use of the information provided on the site for illegal purposes.<br><br>
+
+											Pay&earn reserves the right to make amendments and changes to the site from time to time without any prior notice. Use of this site also constitutes to the acceptance of further modifications made to the site.<br><br>
+
+											<b>Restrictions:</b><br><br>
+
+											-The site information is not to be used for any illegal purposes.<br>
+											-You agree to use the products and services in a non-commercial manner.<br>
+											-By using the site you agree to notify us in case of any unauthorized access of services or claims by any third party.<br>
+											-You agree not to copy, reproduce, recompile, publish, display, make changes to, add, edit, modify, upload, transmit or exploit any kind of information or services in an illegal manner.<br>
+											-You may not use the copyrights, trademarks, and service names associated to Pay&earn.<br>
+											-You acknowledge that you have no ownership on any trademarks, rights and compliance related to Pay&earn.<br>
+											-You agree not to send any unsolicited mails with the use of our trademarks.<br>
+											-We take upon your acceptance that you agree to further terms and conditions for any applicable law of the site.<br>
+											-The websites logos, content, logos and text, are protected by copyrights of the site. You agree to abide by the compliance law and the services thereby. If you wish to download any content you could do so, as per the terms and conditions of the site. You could use the content for non-commercial purpose only. You agree to abide by the law for non-transmission of any information.<br><br>
+
+											<b>Accuracy:</b><br><br>
+
+											There is no warranty or guarantee to the accuracy, completeness, quality, efficacy, integrity or validity of the information provided thereof. We are not liable for any information taken from sources for any errors or omissions. We are also not responsible for various other links provided on the site with any content errors. The photographs of products displayed may change as per the manufacturers’ specifications which may lead to products delivered which may look different from that displayed on the website.<br><br>
+
+											<b>Rights reserved:</b><br><br>
+
+											All rights, both present and future belong to us inclusive of all proprietary rights and are for the sole use of Pay&earn. You may not copy or use completely or partly the services thereof.<br><br>
+
+											<b>Disclaimer of liability:</b><br><br>
+
+											The content and the material provided on this website can be subject to typographic errors, and technical inaccuracies. The site could be subject to interruption at certain times, but timely reviews, modifications and changes would be made accordingly for better improvements.<br><br>
+
+											We endeavor for professional quality of services on our site, also we are not liable for the errors, and damages that arise from the usage of the website.<br><br>
+
+											You agree to abide by the Privacy Policy of the site and the disclosure of information to any third party as per the policy norms.<br><br>
+
+											We take the complete control and rights to amend and modify the content anytime. We shall not be held responsible for any delay or failure that arises directly or indirectly beyond our control.<br><br>
+
+											Please feel free to contact us for further clarification. 
+																				<br />
+																				<br />
 								</p>
+								
 							</div>
 						</div>
 						<div class="row">
