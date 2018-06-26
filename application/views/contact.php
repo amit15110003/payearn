@@ -73,18 +73,18 @@
 									<span class="sep-holder"><span class="sep-line"></span></span>
 								</div>
 								<div class="contact-form-wrapper">
-									<form class="contact-form">
+									<?php $attributes = array("name" => "contact"); echo form_open_multipart("contact", $attributes);?>
 										<div class="row">
 											<div class="col-md-6">
 												<label>your name <span class="required">*</span></label>
 												<div class="form-wrap">
-													<input type="text" name="your-name" value="" size="40" />
+													<input type="text" name="c_name" value=""/>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<label>your email <span class="required">*</span></label>
 												<div class="form-wrap">
-													<input type="email" name="your-email" value="" size="40" />
+													<input type="email" name="c_mail" />
 												</div>
 											</div>
 										</div>
@@ -92,7 +92,7 @@
 											<div class="col-md-12">
 												<label>subject</label>
 												<div class="form-wrap">
-													<input type="text" name="your-subject" value="" size="40" />
+													<input type="text" name="c_subject"/>
 												</div>
 											</div>
 										</div>
@@ -100,7 +100,7 @@
 											<div class="col-md-12">
 												<label>message</label>
 												<div class="form-wrap">
-													<textarea name="your-message" cols="40" rows="10"></textarea>
+													<textarea name="c_message" cols="40" rows="10"></textarea>
 												</div>
 											</div>
 										</div>
@@ -111,7 +111,6 @@
 												</div>
 											</div>
 										</div>
-									</form>
 								</div>
 							</div>
 						</div>

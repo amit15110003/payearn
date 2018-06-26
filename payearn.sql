@@ -66,6 +66,20 @@ CREATE TABLE IF NOT EXISTS `category` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `c_id` int(11) NOT NULL,
+  `c_name` varchar(200) NOT NULL,
+  `c_mail` text NOT NULL,
+  `c_subject` text NOT NULL,
+  `c_message` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+
+--
 -- Table structure for table `warehouse`
 --
 

@@ -158,4 +158,11 @@ class user extends CI_Model
     {$data = array('s_mail'=>$email);
 		return $this->db->insert('subscribe', $data);
 	}
+
+	//contact message
+	function insert_contact($data)
+    {
+		return $this->db->insert('contact', $data);
+	}
+
 }?>
