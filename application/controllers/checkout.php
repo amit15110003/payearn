@@ -1,18 +1,13 @@
 <?php
 class checkout extends CI_Controller
 {
-	public function __construct()
-	{	
-		
+		public function __construct()
+	{
 		parent::__construct();
-		$this->load->helper(array('form','url'));
-		$this->load->library(array('session', 'form_validation'));
+		$this->load->helper(array('form','url', 'html','text','typography','date'));
+		$this->load->library(array('session', 'form_validation','pagination','cart'));
 		$this->load->database();
 		$this->load->model('user');
-		if(!$this->session->userdata('uid')){
-                redirect('login', 'refresh');
-         }
-
 	}
 	
 	public function index()
@@ -21,29 +16,11 @@ class checkout extends CI_Controller
 		$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]');
 		if ($this->form_validation->run() == FALSE)
         {
-		$details['query']=$this->user->showcart($this->session->userdata('uid'));
-		$details['category']=$this->user->showcategory();
-		$details1=$this->user->deliveryadd($this->session->userdata('uid'));
-			if(!empty($details1)){
-			$data['fname'] = $details1[0]->fname;
-			$data['lname'] = $details1[0]->lname;
-			$data['country'] = $details1[0]->country;
-			$data['state'] = $details1[0]->state;
-			$data['town'] = $details1[0]->town;
-			$data['addr'] = $details1[0]->addr;
-			$data['mob'] = $details1[0]->mob;
-			$data['pin'] = $details1[0]->pin;}
-			else{
-			$data['fname'] = "";
-			$data['lname'] = "";
-			$data['country'] = "";
-			$data['state'] ="";
-			$data['town'] = "";
-			$data['addr'] ="";
-			$data['mob'] = "";
-			$data['pin'] ="";}
-		$this->load->view('header',$details);
+		$data['query']=$this->user->showcart($this->session->userdata('uid'));
+		$data['query1']=$this->user->deliveryadd($this->session->userdata('uid'));
+		$this->load->view('header');
 		$this->load->view('checkout',$data);
+		$this->load->view('footer');
 		}
 		else{
 			$uid=$this->session->userdata('uid');
@@ -77,7 +54,6 @@ class checkout extends CI_Controller
 	{	
 		
 		$details['query']=$this->user->showcart($this->session->userdata('uid'));
-		$details['category']=$this->user->showcategory();
 		$details1=$this->user->deliveryadd($this->session->userdata('uid'));
 		$data['fname'] = $details1[0]->fname;
 		$data['lname'] = $details1[0]->lname;
@@ -87,7 +63,7 @@ class checkout extends CI_Controller
 		$data['addr'] = $details1[0]->addr;
 		$data['mob'] = $details1[0]->mob;
 		$data['pin'] = $details1[0]->pin;
-		$this->load->view('header',$details);
+		$this->load->view('header');
 		$this->load->view('checkout1',$data);
 		
 	}
@@ -104,6 +80,15 @@ class checkout extends CI_Controller
     {
     	$this->load->view('header');
 		$this->load->view('success');
+    }
+
+    public function summary()
+    {
+		$data['query']=$this->user->showcart($this->session->userdata('uid'));
+		$data['query1']=$this->user->deliveryadd($this->session->userdata('uid'));
+    	$this->load->view('client/header');
+		$this->load->view('client/summary',$data);
+		$this->load->view('client/footer');
     }
 
 	

@@ -125,7 +125,7 @@
 										</tbody>
 									</table>
 									<div class="proceed-to-checkout">
-										<a href="#">Proceed to Checkout</a>
+										<a href="<?php echo base_url();?>index.php/Checkout">Proceed to Checkout</a>
 									</div>
 								</div>
 								<!--<div class="coupon-shipping">
