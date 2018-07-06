@@ -164,5 +164,26 @@ class user extends CI_Model
     {
 		return $this->db->insert('contact', $data);
 	}
+	//checkout
 
+	public function order_max()
+    {
+             $this->db->select_max('order_id','oid');
+                $result = $this->db->get('orderadd')->row();  
+                $oid1=$result->oid;
+                $oid=$oid1+1;
+                return $oid;
+    }
+    
+	function orderdetails($data)
+	{
+        return $this->db->insert('orderadd',$data);
+	}
+
+	public function orderdetails_txnid($txnid)
+	{	
+		$this->db->where('txnid', $txnid);
+		$query=$this->db->get('orderadd');;
+		return $query->result();
+	}
 }?>

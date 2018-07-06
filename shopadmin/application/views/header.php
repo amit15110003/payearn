@@ -416,7 +416,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		>		
 		<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 			<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" ><a  href="<?php echo base_url();?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">  <span class="m-menu__link-wrap">      <span class="m-menu__link-text">Dashboard</span>      <span class="m-menu__link-badge"><span class="m-badge m-badge--danger">2</span></span>  </span></span></a></li>
-
+			<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" ><a  href="<?php echo base_url();?>index.php/pos" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">  <span class="m-menu__link-wrap">      <span class="m-menu__link-text">POS</span>      <span class="m-menu__link-badge"></span>  </span></span></a></li>
 			<li class="m-menu__section">
                 <h4 class="m-menu__section-text">Settings</h4>
                 <i class="m-menu__section-icon flaticon-more-v3"></i>
