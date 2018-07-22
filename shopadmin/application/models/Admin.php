@@ -48,9 +48,8 @@ class admin extends CI_Model
 		return $query->result();
 	}
 
-	function get_members($id)
+	function get_members()
 	{
-		$this->db->where('a_id', $id);
         $query = $this->db->get('admin_login');
 		return $query->result();
 	}
@@ -62,13 +61,13 @@ class admin extends CI_Model
 	function update_member($a_id,$data)
 	{
 		$this->db->where('a_id', $a_id);
-		return $this->db->update('member', $data);
+		return $this->db->update('admin_login', $data);
 		
 	}
 	function memberbyid($a_id)
 	{
 		$this->db->where('a_id', $a_id);
-        $query = $this->db->get('member');
+        $query = $this->db->get('admin_login');
 		return $query->result();
 	}
 

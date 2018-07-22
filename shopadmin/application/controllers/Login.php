@@ -39,7 +39,7 @@ class login extends CI_Controller
 			$uresult = $this->admin->adminlogin($a_mail, $a_pass);
 			if (count($uresult) > 0)
 			{  
-				$sess_data = array('login' => TRUE, 'a_username' => $uresult[0]->a_username,'a_id' => $uresult[0]->a_id,'a_mail'=> $uresult[0]->a_mail);
+				$sess_data = array('login' => TRUE, 'a_username' => $uresult[0]->a_username,'a_id' => $uresult[0]->a_id,'a_wid' => $uresult[0]->a_wid,'a_design' => $uresult[0]->a_design,'a_mail'=> $uresult[0]->a_mail);
 
 				$this->session->set_userdata($sess_data);
 				redirect('home');
@@ -163,5 +163,12 @@ class login extends CI_Controller
 			}
 		
     }
-	
+	function logout()
+	{
+		// destroy session
+        $data = array('login' => '', 'a_username' => '', 'a_id' => '', 'a_wid' => '');
+        $this->session->unset_userdata($data);
+        $this->session->sess_destroy();
+		redirect('login');
+	}
 }

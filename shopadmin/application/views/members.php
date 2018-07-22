@@ -89,19 +89,19 @@
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label" for="exampleTextarea">Mail:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="a_mail" id="exampleTextarea" rows="3"></textarea>
+									<input type="text" class="form-control m-input" name="a_mail" id="exampleTextarea" >
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label" for="exampleTextarea">Contact:</label>
 								<div class="col-lg-6">
-									<input type="number" class="form-control m-input" name="a_contact" id="exampleTextarea" rows="3"></textarea>
+									<input type="number" class="form-control m-input" name="a_contact" id="exampleTextarea">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
 								<label class="col-lg-2 col-form-label" for="exampleTextarea">Password:</label>
 								<div class="col-lg-6">
-									<input type="password" class="form-control m-input" name="a_contac" id="password" rows="3"></textarea>
+									<input type="password" class="form-control m-input" name="a_pass" id="password" >
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
@@ -111,6 +111,16 @@
 										<option value="Admin">Admin</option>
 										<option value="Vendor">Vendor</option>
 										<option value="Billing">Billing</option>
+									</select>
+								</div>
+							</div>
+							<div class="m-form__group form-group row">
+								<label for="exampleSelect1" class="col-lg-2 col-form-label">Warehouse</label>
+								<div class="col-lg-6">
+									<select class="form-control m-input" name="a_wid" id="exampleSelect1">
+										<?php foreach ($query1 as $member) { if($member->w_status=="1") {?>
+										<option value="<?php echo $member->w_id;?>"><?php echo $member->w_name;?> </option>
+										<?php }}?>	
 									</select>
 								</div>
 							</div>

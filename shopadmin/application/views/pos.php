@@ -153,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              							?>
 										<tr>
 											<td>
-												<a href="shop-detail.html"><?php  echo $details[0]->p_name;?></a>
+												<a href=""><?php  echo $details[0]->p_name;?></a>
 											</td>
 											<td>
 												<span class="amount">Rs <span id="itemcost_<?php echo $i;?>"><?php  echo $details[0]->p_sp;?></span></span>
@@ -176,10 +176,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<td></td>
 					<td>Total:</td>
 					<td>Rs. <?php echo $amount?></td>
-					<input type="text" name="pid" value="<?php echo implode(",",$pid);?>">
-            		<input type="text" name="pc" value="<?php echo implode(",",$pc);?>">
-            		<input type="text" name="qty" value="<?php echo implode(",",$qty);?>">
-            		<input type="text" name="amount" value="<?php echo $amount;?>">
+					<input type="hidden" name="pid" value="<?php if(!empty($pid)){echo implode(",",$pid);}?>">
+            		<input type="hidden" name="pc" value="<?php if(!empty($pc)){echo implode(",",$pc);}else{$pc=0;}?>">
+            		<input type="hidden" name="qty" value="<?php if(!empty($qty)){echo implode(",",$qty);}?>">
+            		<input type="hidden" name="amount" value="<?php echo $amount;?>">
 				</tr>
 			</tbody>
 		</table>
@@ -285,30 +285,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              });
          }
       </script> 
-      <script type="text/javascript">
+      <script>
       function posadd(id)
       { 
         var qty = 1;
         $.ajax({  
                      type: "POST",
-                      url: "<?php echo site_url('pos/itemadd');?>",
-                      data:'&id='+id+'&qty='+qty,
-                      success: function (data) {
+                      url: "<?php echo base_url();?>index.php/pos/itemadd",
+                      data:'&id='+id+'&qty='+qty, 
+                      success: function (html) {
                      $('#posbill').html(html);
-                     $('.loading').fadeOut("slow");
-                    }
+                    	}
                   });
       }
       </script> 
-      <script type="text/javascript">
+      <script >
     function remove_cart(postid)
     {
             $.ajax({
                     type: "POST",
-                    url: "<?php echo site_url('pos/removecart');?>",
-                    data:"rowid="+postid,
-                    success: function (response) {
-                    }
+                    url: "<?php echo base_url();?>index.php/pos/removecart",
+                    data:'&rowid='+postid,
+                    success: function (html) {
+                    	}
                 });
     }
   </script>      

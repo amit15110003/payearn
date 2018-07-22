@@ -5,7 +5,7 @@
 		<div class="m-portlet__head-caption">
 			<div class="m-portlet__head-title">
 				<h3 class="m-portlet__head-text">
-					Update Product
+					Update Member
 				</h3>
 			</div>
 		</div>
@@ -19,9 +19,9 @@
 						<input type="hidden" name="a_id" value="<?php echo $a_id;?>">
 			            <div class="m-form__section m-form__section--middle">
 							<div class="m-form__group form-group row">
-								<label class="col-lg-2 col-form-label">member Name:</label>
+								<label class="col-lg-2 col-form-label">User Name:</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="a_name" placeholder="" value="<?php echo $a_name;?>">
+									<input type="text" class="form-control m-input" name="a_name" placeholder="" value="<?php echo $a_username;?>">
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
@@ -31,9 +31,13 @@
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
-								<label class="col-lg-2 col-form-label">Designation:</label>
+								<label for="exampleSelect1" class="col-lg-2 col-form-label">Designation</label>
 								<div class="col-lg-6">
-									<input type="text" class="form-control m-input" name="a_design" placeholder="" value="<?php echo $a_design;?>">
+									<select class="form-control m-input" name="a_design" id="exampleSelect1">
+										<option value="Admin">Admin</option>
+										<option value="Vendor">Vendor</option>
+										<option value="Billing">Billing</option>
+									</select>
 								</div>
 							</div>
 							<div class="m-form__group form-group row">
@@ -48,7 +52,16 @@
 									<input type="text" class="form-control m-input" name="a_mail" placeholder="" value="<?php echo $a_mail;?>">
 								</div></div>
 								
-							
+							<div class="m-form__group form-group row">
+								<label for="exampleSelect1" class="col-lg-2 col-form-label">Warehouse</label>
+								<div class="col-lg-6">
+									<select class="form-control m-input" name="a_wid" id="exampleSelect1">
+										<?php foreach ($query1 as $member) { if($member->w_status=="1") {?>
+										<option value="<?php echo $member->w_id;?>"><?php echo $member->w_name;?> </option>
+										<?php }}?>	
+									</select>
+								</div>
+							</div>
 							<div class="m-form__group form-group row">
 								<label for="exampleSelect1" class="col-lg-2 col-form-label">Status:</label>
 								<div class="col-lg-2">
@@ -78,4 +91,4 @@
 		</div>
 	</div>
 
-<!--end:: Widgets/member Progress -->  </div></div></div>
+<!--end:: Widgets/member Progress -->  </div></div>

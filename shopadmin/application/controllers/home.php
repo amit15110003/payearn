@@ -57,7 +57,8 @@ class home extends CI_Controller {
 
 	public function members()
 	{
-		$data['query']=$this->admin->get_members($this->session->userdata('a_id'));
+		$data['query']=$this->admin->get_members();
+		$data['query1']=$this->admin->get_warehouse();
 		$this->load->view('header');
 		$this->load->view('members', $data);
 		$this->load->view('footer');		
@@ -65,13 +66,15 @@ class home extends CI_Controller {
 
 	public function add_member()
 	{
-            $id=$this->session->userdata('a_id');
 			$data = array
 			(
 				'a_username' => $this->input->post('a_username'),
 				'a_contact' => $this->input->post('a_contact'),
 				'a_mail' => $this->input->post('a_mail'),
-				'status' => $this->input->post('a_status')
+				'a_wid' => $this->input->post('a_wid'),
+				'status' => $this->input->post('a_status'),
+				'a_pass' => $this->input->post('a_pass'),
+				'a_design' => $this->input->post('a_design'),
 			);
 			
 			if ($this->admin->add_member($data))
@@ -88,13 +91,15 @@ class home extends CI_Controller {
 
 	}
 	public function user_id($a_id)
-	{   $details=$this->admin->adminbyid($a_id);
+	{   $details=$this->admin->memberbyid($a_id);
+		$data['query1']=$this->admin->get_warehouse();
         	    	$data['a_id'] = $details[0]->a_id;
         			$data['a_username'] = $details[0]->a_username;
         			$data['a_contact'] = $details[0]->a_contact;
+        			$data['a_design'] = $details[0]->a_design;
 					$data['a_mail'] = $details[0]->a_mail;
 					$data['a_pass'] = $details[0]->a_pass;
-					$data['a_status'] = $details[0]->a_status;
+					$data['status'] = $details[0]->status;
 					
      			$this->load->view('header');
 				$this->load->view('adminbyid',$data);

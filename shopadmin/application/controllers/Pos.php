@@ -24,7 +24,6 @@ class Pos extends CI_Controller {
 	function viewsort(){
 
         $keywords = $this->input->post('keywords');
-        $config = array();
        $data['query']=$this->posmodal->productfilter($keywords);
 		$this->load->view('posproductfilter',$data);
     }
@@ -37,7 +36,7 @@ class Pos extends CI_Controller {
         'price'   => 0,
         'name'    => 'pos'
 		);
-		return $this->cart->insert($data);
+		$this->cart->insert($data);
 		$this->load->view('posbill');
 	
 
@@ -64,17 +63,20 @@ class Pos extends CI_Controller {
         'rowid' => $this->input->post('rowid'),
         'qty'   => $this->input->post('item')
 	);
-       $this->cart->update($data);
+       return $this->cart->update($data);
 	}
 	public function posorder()
 	{	
             $txnid=Time();
             $data3=array(
+            	'a_id'=>$this->session->userdata('a_id'),
+            	'o_wid'=>$this->session->userdata('a_wid'),
                 'txnid'=> $txnid,
                 'amount'=>$this->input->post('amount'),
                 'p_id'=>$this->input->post('pid'),'p_sp'=>$this->input->post('pc'),'p_qty'=>$this->input->post('qty'),'o_time'=>date('Y-m-d H:i:s',strtotime('now')),
                 'payment_mode' =>  $this->input->post('pay_mode'),);
        $result1=$this->posmodal->orderdetails($data3);
+       $this->cart->destroy();
         /*$details1=$this->posmodal->orderdetails_txnid($txnid);
         $data['p_id'] = $details1[0]->p_id;
         $data['p_sp'] = $details1[0]->p_sp;
