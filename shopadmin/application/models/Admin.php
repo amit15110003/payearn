@@ -120,7 +120,23 @@ class admin extends CI_Model
 		$data['c_status'] = $c_status;
 		return $this->db->update('category', $data);
 	}
-
+	function get_order()
+	{	$this->db->order_by("order_id","desc");
+                $query = $this->db->get('orderpos');
+		return $query->result();
+	}
+	function get_orderid($id)
+	{	
+		$this->db->where('order_id', $id);
+        $query = $this->db->get('orderpos');
+		return $query->result();
+	}
+	public function get_product_id($id)
+	{	
+		$this->db->where('p_id', $id);
+		$query=$this->db->get('product');
+		return $query->result();
+	}
 
 
 }?>

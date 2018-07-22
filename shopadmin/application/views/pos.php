@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="m-stack__item m-brand  m-brand--skin-dark ">
 	<div class="m-stack m-stack--ver m-stack--general">
 		<div class="m-stack__item m-stack__item--middle m-brand__logo">
-			<a href="index9bfb.html?page=index&amp;demo=default" class="m-brand__logo-wrapper">
+			<a href="<?php echo base_url();?>" class="m-brand__logo-wrapper">
 			<img alt="" src="<?php echo base_url();?>assets/demo/default/media/img/logo/logo_default_dark.png"/>
 			</a>  
 		</div>

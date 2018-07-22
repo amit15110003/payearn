@@ -415,13 +415,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 			<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" ><a  href="<?php echo base_url();?>" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">  <span class="m-menu__link-wrap">      <span class="m-menu__link-text">Dashboard</span>      <span class="m-menu__link-badge"><span class="m-badge m-badge--danger">2</span></span>  </span></span></a></li>
 			<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" ><a  href="<?php echo base_url();?>index.php/pos" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title">  <span class="m-menu__link-wrap">      <span class="m-menu__link-text">POS</span>      <span class="m-menu__link-badge"></span>  </span></span></a></li>
+            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+            	<a  href="<?php echo base_url();?>index.php/order" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon flaticon-line-graph"></i>
+            		<span class="m-menu__link-text">Order Details</span>
+            	</a>
+			</li>
 			<li class="m-menu__section">
                 <h4 class="m-menu__section-text">Settings</h4>
                 <i class="m-menu__section-icon flaticon-more-v3"></i>
             </li>
             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
-            		<i class="m-menu__link-icon fa fa-image"></i>
+            		<i class="m-menu__link-icon fa fa-user"></i>
             		<span class="m-menu__link-text">User Details</span>
             		<i class="m-menu__ver-arrow la la-angle-right"></i>
             	</a>
@@ -448,7 +453,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</li>
 			<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
-            		<i class="m-menu__link-icon fa fa-image"></i>
+            		<i class="m-menu__link-icon fa fa-product-hunt"></i>
             		<span class="m-menu__link-text">Products</span>
             		<i class="m-menu__ver-arrow la la-angle-right"></i>
             	</a>
@@ -477,8 +482,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</li>
             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
-            		<i class="m-menu__link-icon fa fa-image"></i>
-            		<span class="m-menu__link-text">Account</span>
+            		<i class="m-menu__link-icon fa fa-briefcase"></i>
+            		<span class="m-menu__link-text">Mangement</span>
             		<i class="m-menu__ver-arrow la la-angle-right"></i>
             	</a>
             	<div class="m-menu__submenu ">
