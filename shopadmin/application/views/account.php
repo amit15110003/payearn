@@ -14,9 +14,10 @@
 		<div class="m-portlet__head-tools">
 			<ul class="m-portlet__nav">
 				<li class="m-portlet__nav-item">
-					<?php $attributes = array("name" => "add_product"); echo form_open_multipart("product/add_Product", $attributes);?>
+					<?php $attributes = array("name" => "account"); echo form_open_multipart("account/filter", $attributes);?>
 					<input type="date" name="s">
 					<input type="date" name="e">
+					<button type="submit">Filter</button>
 	                <?php echo form_close(); ?>
 					<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
 					</div>				

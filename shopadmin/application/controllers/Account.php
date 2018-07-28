@@ -18,11 +18,19 @@ class Account extends CI_Controller {
 
 	public function index()
 	{   
-		$data['query'] = $this->admin->get_order_by_date();
+		$data['query'] = $this->admin->get_order();
         $this->load->view('header');
 		$this->load->view('account',$data);
 		$this->load->view('footer');
 	}
-	
+	public function filter()
+	{   
+        $s=$this->input->post('s');
+        $e=$this->input->post('e');
+		$data['query'] = $this->admin->get_order_filter($s,$e);
+        $this->load->view('header');
+		$this->load->view('account',$data);
+		$this->load->view('footer');
+	}
 
 }

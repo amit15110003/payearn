@@ -138,8 +138,9 @@ class admin extends CI_Model
 		return $query->result();
 	}
 
-	function get_order_all()
-	{	
+	function get_order_filter($s,$e)
+	{	$this->db->where('o_time >=', $s);
+		$this->db->where('o_time <=', $e);
         $query = $this->db->get('orderpos');
 		return $query->result();
 	}
