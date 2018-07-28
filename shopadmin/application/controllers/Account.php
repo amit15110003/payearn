@@ -32,5 +32,13 @@ class Account extends CI_Controller {
 		$this->load->view('account',$data);
 		$this->load->view('footer');
 	}
+	public function filterd()
+	{   
+        $o=$this->input->post('o');
+		$data['query'] = $this->admin->get_order_filterd($o);
+        $this->load->view('header');
+		$this->load->view('account',$data);
+		$this->load->view('footer');
+	}
 
 }
