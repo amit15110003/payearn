@@ -56,9 +56,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
-								<form>
-									<input type="search" class="top-search-input" name="s" placeholder="What are you looking for?" />
-								</form>
+								 <?php $attributes = array("name" => "search");
+                      echo form_open("shop/search", $attributes);?>
+									<input type="search" class="top-search-input" name="keyword" placeholder="What are you looking for?" />
+                  <?php echo form_close(); ?>
 							</div>
 						</div>
 					</div>

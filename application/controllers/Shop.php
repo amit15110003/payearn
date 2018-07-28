@@ -77,6 +77,31 @@ class Shop extends CI_Controller {
 			}
 		$this->load->view('subscriber',$data);}
     }
+    function search()
+	{
+		if (empty($this->input->post('keyword')))
+        {
+			redirect($_SERVER['HTTP_REFERER']);
+		}else
+		{
+
+    	$keyword = $this->input->post('keyword');
+		$config = array();
+        $config["base_url"] = base_url() . "index.php/shop/search";
+        $config["total_rows"] = $this->user->countproduct_search($keyword);
+        $config["per_page"] = 20;
+        $config["uri_segment"] = 3;
+    	$this->pagination->initialize($config);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $details['query'] = $this->user->search($config["per_page"], $page,$keyword);
+        $details["links"] = $this->pagination->create_links();
+    	$details['category']=$this->user->showcategory();
+		$this->load->view('header',$details);
+    	$this->load->view('search',$details);
+    	$this->load->view('footer',$details);
+    	}
+	}
 	function logout()
 	{
 		// destroy session

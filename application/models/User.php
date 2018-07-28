@@ -186,4 +186,29 @@ class user extends CI_Model
 		$query=$this->db->get('orderadd');;
 		return $query->result();
 	}
+	//search
+	function countproduct_search($keyword)
+	{	$this->db->like('p_name',$keyword);
+		$this->db->where('p_status', "1");
+		$this->db->select_sum('id');
+	    $this->db->from('product');
+
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
+	function search($limit, $start,$keyword)
+	{
+		$this->db->limit($limit, $start);
+	    $this->db->like('p_name',$keyword);
+			$this->db->where('p_status', "1");
+	    $query  =   $this->db->get('product');
+	    return $query->result();
+	}
 }?>
