@@ -115,10 +115,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn"><i class="la la-close"></i></button>						
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
 
-<div class="m-content">
+<div class="m-content" style=" position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;">
 			    			    
-<div class="row">
-	<div class="col-md-4" style="background-color: #fff; height: 600px;padding: 10px;">
+<div class="row" style="padding-top: 60px;">
+	<div class="col-md-4" style="background-color: #fff; height: 100%;padding: 10px;">
 		<?php $attributes = array("name" => "add_member"); echo form_open_multipart("pos/posorder", $attributes);?>
 		<div class="col-md-12">
 			<div class="m-form__group form-group row">
@@ -135,6 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="col-md-12">
 			<div id="posbill">
+	        <div style="  overflow: auto; height: 350px;">
 			<table class="poscounter" width="100%">
 			<thead>
 			<tr style="color:#fff;background-color:#34BFA3;">
@@ -171,22 +179,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</td>
 										</tr>
 										<?php $i++;  $amount=$amount+$details[0]->p_sp*$item['qty'];$pid[] = $item['id'];$pc[] = $details[0]->p_sp*$item['qty'];$qty[]=$item['qty'];}}?>
-				<tr style="border-top: solid 1px #c7c7c7;">
-					<td></td>
-					<td></td>
-					<td>Total:</td>
-					<td>Rs. <?php echo $amount?></td>
+					
 					<input type="hidden" name="pid" value="<?php if(!empty($pid)){echo implode(",",$pid);}?>">
             		<input type="hidden" name="pc" value="<?php if(!empty($pc)){echo implode(",",$pc);}else{$pc=0;}?>">
             		<input type="hidden" name="qty" value="<?php if(!empty($qty)){echo implode(",",$qty);}?>">
             		<input type="hidden" name="amount" value="<?php echo $amount;?>">
-				</tr>
 			</tbody>
 		</table>
 		</div>
+			<div class="m-form__group form-group row">
+				<label for="exampleSelect1" class="col-lg-6 col-form-label">Total:</label>
+				<div class="col-lg-6" style="padding-top: 10px;">
+						Rs.<?php echo $amount?>
+				</div>
+			</div>
+			<hr>
+		</div>
 		</div>
 		<div class="col-md-12">
-			<hr>
 			<div class="m-form__group form-group row">
 				<label for="exampleSelect1" class="col-lg-6 col-form-label">Payment Mode:</label>
 				<div class="col-lg-6">

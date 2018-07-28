@@ -1,3 +1,4 @@
+<div style="  overflow: auto; height: 350px;">
 <table class="poscounter" width="100%">
 			<thead>
 			<tr style="color:#fff;background-color:#34BFA3;">
@@ -34,15 +35,18 @@
 											</td>
 										</tr>
 										<?php $i++;  $amount=$amount+$details[0]->p_sp*$item['qty'];$pid[] = $item['id'];$pc[] = $details[0]->p_sp*$item['qty'];$qty[]=$item['qty'];}}?>
-				<tr style="border-top: solid 1px #c7c7c7;">
-					<td></td>
-					<td></td>
-					<td>Total:</td>
-					<td>Rs. <?php echo $amount?></td>
+				
 					<input type="hidden" name="pid" value="<?php if(!empty($pid)){echo implode(",",$pid);}?>">
             		<input type="hidden" name="pc" value="<?php if(!empty($pc)){echo implode(",",$pc);}else{$pc=0;}?>">
             		<input type="hidden" name="qty" value="<?php if(!empty($qty)){echo implode(",",$qty);}?>">
             		<input type="hidden" name="amount" value="<?php echo $amount;?>">
-				</tr>
 			</tbody>
 		</table>
+	</div>
+			<div class="m-form__group form-group row">
+				<label for="exampleSelect1" class="col-lg-6 col-form-label">Total:</label>
+				<div class="col-lg-6" style="padding-top: 10px;">
+						Rs.<?php echo $amount?>
+				</div>
+			</div>
+			<hr>
