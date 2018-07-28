@@ -23,7 +23,7 @@
 												<span class="amount">Rs <span id="itemcost_<?php echo $i;?>"><?php  echo $details[0]->p_sp;?></span></span>
 											</td>
 											<td>
-												<div class="quantity">
+												<div class="quantity" style="width: 60px;">
 													<input type="number" min="0" name="quantity" value="<?php echo $item['qty'];?>" class="form-control m-input qty text" size="4" id="itemno_<?php echo $i;?>" onchange="javascript:item1(<?php echo $i;?>);">
 												</div>
 											</td>

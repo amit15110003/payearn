@@ -167,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<span class="amount">Rs <span id="itemcost_<?php echo $i;?>"><?php  echo $details[0]->p_sp;?></span></span>
 											</td>
 											<td>
-												<div class="quantity">
+												<div class="quantity" style="width: 60px;">
 													<input type="number" min="0" name="quantity" value="<?php echo $item['qty'];?>" class="form-control m-input qty text" size="4" id="itemno_<?php echo $i;?>" onchange="javascript:item1(<?php echo $i;?>);">
 												</div>
 											</td>
@@ -232,9 +232,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		<div class="col-md-12">
-			<div class="post-list" id="postList">
+			<div class="post-list" id="postList" style="  overflow: auto; height: 500px;background-color: #fff;">
 				<div class="m-section__content">
-						<div class="m-demo" data-code-preview="true" data-code-html="true" data-code-js="false">
+						<div class="m-demo">
 							<div class="m-demo__preview">
 								<?php $i=0; foreach ($query as $row) {?>
 								<?php if($i%6==0){?><div class="m-stack m-stack--ver m-stack--general m-stack--demo"><?php }?>
