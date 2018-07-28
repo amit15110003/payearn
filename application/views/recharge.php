@@ -1,6 +1,8 @@
 		
 				<div class="section pt-10 pb-10">
+
 					<div class="container">
+						<img src="<?php echo base_url();?>media/images/loyality.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" />
 						<div class="row">
 							<div class="col-sm-12">
 								<hr class="mt-4 mb-7" />
