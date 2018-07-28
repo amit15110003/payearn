@@ -1,6 +1,6 @@
 		
 				<div class="section pt-10 pb-10">
-					<div style="margin-top: -80px;" class="container"> <img src="<?php echo base_url();?>media/images/loyality.jpg " alt=""  ></div>
+					<div style="margin-top: -80px; width:100%; width: auto; " class=""> <img src="<?php echo base_url();?>media/images/loyality.jpg " alt=""  ></div>
 
 					<div class="container">
 						
@@ -31,7 +31,7 @@
 										</div><div class="row">
 											<div class="col-md-12">
 												<div class="form-wrap text-center">
-													<input type="submit" value="SEND US NOW" />
+													<input type="submit" value="RECHARGE NOW" />
 												</div>
 											</div>
 										</div>

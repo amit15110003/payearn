@@ -177,9 +177,9 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4 col-sm-12">
-								<div class="organik-featured-product" data-bg-color="#e7f2d8" data-bg-image="<?php echo base_url();?>media/images/featured_product.png">
+								<div class="organik-featured-product" data-bg-color="#e7f2d8" data-bg-image="<?php echo base_url();?>media/images/featured_product01.png">
 									<div class="organik-featured-product-box">
-										<h3 class="title">Fresh fruits</h3>
+										<h3 class="title">Fresh products</h3>
 										<h1 class="subtitle">More offers for May</h1>
 										<a class="organik-btn small" href="#">Shop now</a>
 									</div>
@@ -467,7 +467,7 @@
 								<div class="testimonial-carousel organik-testimonial style-1" data-auto-play="true" data-desktop="3" data-laptop="3" data-tablet="2" data-mobile="1">
 									<div class="testi-item">
 										<div class="text"> 
-											I'm absolutely thrilled with the beautiful produce. What a treat to find your box at our door. It means the world to my kids and me. Thank you so much for the delicious fruits and veggies!
+											I am a continuous buyer of products from Pay&earn, and quite frankly this online store has always lived up to my expectations. They have always delivered the orders on time and the payment portal is easy and secure.
 										</div>
 										<div class="info">
 											<div class="author">
