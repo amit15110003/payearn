@@ -1,8 +1,9 @@
 		
 				<div class="section pt-10 pb-10">
+					<div style="margin-top: -80px;" class="container"> <img src="<?php echo base_url();?>media/images/loyality.jpg " alt=""  ></div>
 
 					<div class="container">
-						<img src="<?php echo base_url();?>media/images/loyality.jpg " alt="" style="padding-bottom: 70px;" >
+						
 						<div class="row">
 							<div class="col-sm-12">
 								<hr class="mt-4 mb-7" />
