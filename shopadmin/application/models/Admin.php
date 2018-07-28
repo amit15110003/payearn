@@ -138,5 +138,10 @@ class admin extends CI_Model
 		return $query->result();
 	}
 
+	function get_order_all()
+	{	
+        $query = $this->db->get('orderpos');
+		return $query->result();
+	}
 
 }?>
