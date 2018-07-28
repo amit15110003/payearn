@@ -144,5 +144,10 @@ class admin extends CI_Model
         $query = $this->db->get('orderpos');
 		return $query->result();
 	}
+	function get_order_filterd($o)
+	{	$this->db->where('o_time =',$o);
+        $query = $this->db->get('orderpos');
+		return $query->result();
+	}
 
 }?>

@@ -16,11 +16,17 @@
 				<li class="m-portlet__nav-item">
 					<?php $attributes = array("name" => "account"); echo form_open_multipart("account/filter", $attributes);?>
 					<input type="date" name="s">
-					<input type="date" name="e">
+					<input type="date" name="e" value="<?php echo date('Y-m-d H:i:s'); ?>">
 					<button type="submit">Filter</button>
 	                <?php echo form_close(); ?>
 					<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
 					</div>				
+				</li>
+				<li>
+					<?php $attributes = array("name" => "account"); echo form_open_multipart("account/filterd", $attributes);?>
+					<input type="date" name="o">
+					<button type="submit">Filter</button>
+	                <?php echo form_close(); ?>
 				</li>
 			</ul>
 		</div>
@@ -66,7 +72,6 @@
 				<th title="Field #2">Client Name</th>
 				<th title="Field #3">Payment</th>
 				<th title="Field #4">Amount</th>
-				<th title="Field #6">Time</th>
 				<th title="Field #7">Edit</th>
 			</tr>
 			</thead>
@@ -79,7 +84,6 @@
 				<td><?php echo $row->u_id;?></td>
 				<td><?php echo $row->payment_mode;?></td>
 				<td><?php echo $row->amount;?></td>
-				<td><?php echo $row->o_time;?></td>
 				<td><a href="<?php echo base_url().'index.php/order/orderview/'.$row->order_id; ?>" class="btn btn-primary">
 						<span>
 							
