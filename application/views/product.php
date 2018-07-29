@@ -140,11 +140,10 @@
       <script type="text/javascript">
       function wishlist(id)
       {
-             var qty = '1';
               $.ajax({
                       type: "POST",
                       url: "<?php echo site_url('profile/wishlist');?>",
-                      data:"id="+id+'&qty='+qty,
+                      data:"id="+id,
                     success: function (response) {
                      location.reload();
                     }
