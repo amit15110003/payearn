@@ -74,10 +74,10 @@ class profile extends CI_Controller
 		
 		if ($this->form_validation->run() == FALSE)
         {
-        	$details = $this->user->get_user_by_id($this->session->userdata('uid'));
+        	$details = $this->user->get_user_by_id($this->session->userdata('u_id'));
         	$data['u_contact'] = $details[0]->u_contact;
         	$data['u_name'] = $details[0]->u_name;
-        	$data['email'] = $details[0]->email;
+        	$data['u_mail'] = $details[0]->u_mail;
         	$data['u_lname'] = $details[0]->u_lname;
         	$this->load->view('header',$data);
 			$this->load->view('profile',$data);
