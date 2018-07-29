@@ -143,7 +143,7 @@ class profile extends CI_Controller
 
 
 	if($resultcheckcart == '0' ){
-	$data=array('p_id'=>$postid,'u_id'=>$uid);
+	$data=array('p_id'=>$postid,'u_id'=>$u_id,'item'=>'1');
 	$this->db->insert('wishlist',$data);
 		echo '<script language="javascript">';
 		echo 'alert("Successfully add to cart")';
@@ -151,7 +151,7 @@ class profile extends CI_Controller
 	}
 	else{
 		$this->db->delete('wishlist', array('p_id'=>$postid,
-										  'u_id'=>$uid));
+										  'u_id'=>$u_id));
 		echo '<script language="javascript">';
 		echo 'alert("Already add to cart")';
 		echo '</script>';
