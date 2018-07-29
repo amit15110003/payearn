@@ -6,10 +6,10 @@
                             $amount=$amount+($details[0]->p_sp*$item['qty']);$pid[] = $item['id'];$pc[] = $details[0]->p_sp;$qty[]=$item['qty'];
                         }
                     }
-                    elseif(!empty($this->session->userdata('uid'))){
-                   foreach ($query as $row ) {
+                    elseif(!empty($this->session->userdata('u_id'))){
+                   foreach ($query as $row) {
                   $details=$this->user->get_product_by_id($row->p_id);
-                   $amount=$amount+($details[0]->p_sp*$row->item);$pid[] = $row->productid;$pc[] = $details[0]->p_sp;$qty[]=$row->item;}}
+                   $amount=$amount+($details[0]->p_sp*$row->item);$pid[] =$row->p_id; $pc[] = $details[0]->p_sp; $qty[]=$row->item;}}
                    ?>
 				<div class="section section-checkout pt-7 pb-7">
 					<div class="container">
@@ -112,9 +112,9 @@
 											PayPal <img src="images/payment.jpg" alt="">
 										</li>
 									</ul>
-            						<input type="hidden" name="pid" value="<?php echo implode(",",$pid);?>">
-            						<input type="hidden" name="pc" value="<?php echo implode(",",$pc);?>">
-            						<input type="hidden" name="qty" value="<?php echo implode(",",$qty);?>">
+            						<input type="hidden" name="pid" value="<?php if(!empty($pid)){ echo implode(",",$pid);}?>">
+            						<input type="hidden" name="pc" value="<?php if(!empty($pc)){echo implode(",",$pc);}?>">
+            						<input type="hidden" name="qty" value="<?php if(!empty($qty)){echo implode(",",$qty);}?>">
 									<div class="text-right text-center-sm">
 										<button class="organik-btn mt-6" type="submit"> Place Order </a>
 									</div>
