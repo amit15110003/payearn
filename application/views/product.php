@@ -53,6 +53,11 @@
 										            <?php }else{?>
 			            							<a onclick="javascript:wishlist(<?php echo $p_id;?>);" id="wish"><span id="wishtext">Add To Wishlist</span></a>
 			          								<?php } ?>
+											</div><br>
+											<div>
+												<h6>Description: </h6> <p>
+														<?php echo $p_adddesc;?>
+													</p>
 											</div>
 											<div class="product-meta">
 												<table>
@@ -75,25 +80,9 @@
 										</div>
 									</div>
 									<div class="col-md-12">
-										<div class="commerce-tabs tabs classic">
-											<ul class="nav nav-tabs tabs">
-												<li class="active">
-													<a data-toggle="tab" href="#tab-description" aria-expanded="true">Description</a>
-												</li>
-												<li class="">
-													<a data-toggle="tab" href="#tab-reviews" aria-expanded="false">Reviews</a>
-												</li>
-											</ul>
-											<div class="tab-content">
-												<div class="tab-pane fade active in" id="tab-description">
-													<p>
-														<?php echo $p_adddesc;?>
-													</p>
-												</div>
-											</div>
-										</div>
+										
 										<div class="related">
-											<div class="related-title">
+											<div class="related-title"><br>
 												<div class="text-center mb-1 section-pretitle fz-34">Related</div>
 												<h2 class="text-center section-title mtn-2 fz-24">Products</h2>
 											</div>
