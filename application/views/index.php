@@ -10,104 +10,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="section mtn-10 mb-3">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="category-carousel" data-auto-play="false" data-desktop="4" data-laptop="3" data-tablet="3" data-mobile="2">
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Fruits</span> 
-													<span class="count"> 5 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_1.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Vegetables</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_2.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Dried</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_3.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Juice</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_4.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Fruits</span> 
-													<span class="count"> 5 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_1.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Vegetables</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_2.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Dried</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_3.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-									<div class="category-item">
-										<div class="category-item-inner">
-											<a href="#">
-												<div class="info">
-													<span class="name">Juice</span> 
-													<span class="count"> 6 items </span>
-												</div>
-												<img src="<?php echo base_url();?>media/images/category/cate_4.jpg" alt="" />
-											</a>
-										</div>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				<div class="section pt-12 pb-9">
 					<div class="container">
 						<div class="row">
@@ -467,7 +370,8 @@
 								<div class="testimonial-carousel organik-testimonial style-1" data-auto-play="true" data-desktop="3" data-laptop="3" data-tablet="2" data-mobile="1">
 									<div class="testi-item">
 										<div class="text"> 
-											I am a continuous buyer of products from Pay&earn, and quite frankly this online store has always lived up to my expectations. They have always delivered the orders on time and the payment portal is easy and secure.
+											I am a continuous buyer of products from Pay&earn, and quite frankly this online store has always lived up to my expectations. 
+											They have always delivered the orders on time and the payment portal is easy and secure.
 										</div>
 										<div class="info">
 											<div class="author">
@@ -478,7 +382,7 @@
 									</div>
 									<div class="testi-item">
 										<div class="text"> 
-											I've been receiving a box from you guys for roughly one year now, and absolutely love it. I could not be happier with the fresh produce I receive. Thanks so much for all you do!
+											A great friendly service delivering market quality produce to your door. It’s so hard to find time to get to the market and keep a steady supply of grocery items for my kids lunchboxes and snacks. The prices are consistent with the prices I normally pay at Local Markets.
 										</div>
 										<div class="info">
 											<div class="author">
@@ -489,7 +393,7 @@
 									</div>
 									<div class="testi-item">
 										<div class="text"> 
-											Since we have started receiving your produce my children are eating lots more carrots. It is because your carrots taste so much better than the kind we were getting in the grocery store.
+											I’ve been using Pay&earn for a couple of months now & absolutely rave about it. Incredible service, always in delivery window, communication clear if substitutes not available, great customer service via email & the best bit - really great groceries from all your favourite stores.
 										</div>
 										<div class="info">
 											<div class="author">
@@ -500,7 +404,11 @@
 									</div>
 									<div class="testi-item">
 										<div class="text"> 
-											I'm absolutely thrilled with the beautiful produce. What a treat to find your box at our door. It means the world to my kids and me. Thank you so much for the delicious fruits and veggies!
+											Great service, huge range of products! 
+											Love the convenience. 
+											Nice knowing I’m supporting local small businesses. 
+											Highly recommend trying 
+											Best thing I’ve done swapping from a larger market to your online grocery store.
 										</div>
 										<div class="info">
 											<div class="author">
@@ -509,61 +417,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="testi-item">
-										<div class="text"> 
-											I've been receiving a box from you guys for roughly one year now, and absolutely love it. I could not be happier with the fresh produce I receive. Thanks so much for all you do!
-										</div>
-										<div class="info">
-											<div class="author">
-												<span class="name">Andrea</span>
-												<span class="tagline">Teacher, USA</span>
-											</div>
-										</div>
-									</div>
-									<div class="testi-item">
-										<div class="text"> 
-											Since we have started receiving your produce my children are eating lots more carrots. It is because your carrots taste so much better than the kind we were getting in the grocery store.
-										</div>
-										<div class="info">
-											<div class="author">
-												<span class="name">Kenne</span>
-												<span class="tagline">Manager, USA</span>
-											</div>
-										</div>
-									</div>
-									<div class="testi-item">
-										<div class="text"> 
-											I'm absolutely thrilled with the beautiful produce. What a treat to find your box at our door. It means the world to my kids and me. Thank you so much for the delicious fruits and veggies!
-										</div>
-										<div class="info">
-											<div class="author">
-												<span class="name">Leslie</span>
-												<span class="tagline">Accountant, USA</span>
-											</div>
-										</div>
-									</div>
-									<div class="testi-item">
-										<div class="text"> 
-											I've been receiving a box from you guys for roughly one year now, and absolutely love it. I could not be happier with the fresh produce I receive. Thanks so much for all you do!
-										</div>
-										<div class="info">
-											<div class="author">
-												<span class="name">Andrea</span>
-												<span class="tagline">Teacher, USA</span>
-											</div>
-										</div>
-									</div>
-									<div class="testi-item">
-										<div class="text"> 
-											Since we have started receiving your produce my children are eating lots more carrots. It is because your carrots taste so much better than the kind we were getting in the grocery store.
-										</div>
-										<div class="info">
-											<div class="author">
-												<span class="name">Kenne</span>
-												<span class="tagline">Manager, USA</span>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 						</div>
