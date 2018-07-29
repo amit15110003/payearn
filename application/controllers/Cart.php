@@ -103,5 +103,26 @@ class cart extends CI_Controller
 		}
 
 	}
+	function removecart($rowid) 
+	{
+
+                    // Destroy selected rowid in session.
+			if ($rowid==="all"){
+                       // Destroy data which store in  session.
+			$this->cart->destroy();
+		}else{
+                    // Destroy selected rowid in session.
+			$data = array(
+				'rowid'   => $rowid,
+				'qty'     => 0
+			);
+                     // Update cart data, after cancle.
+			$this->cart->update($data);
+		}
+		
+                 // This will show cancle data in cart.
+		redirect('cart');
+		
+	}
 		
 }

@@ -12,7 +12,7 @@
              							?>
 										<tr class="cart_item">
 											<td class="product-remove">
-												<a class="remove" onclick="javascript:remove_cart(<?php echo $item['id'];?>);">×</a>
+												<a class="remove" href="<?php echo base_url()?>index.php/cart/removecart/<?php echo $item['rowid'];?>">×</a>
 												<span class="hidden" id="itemid_<?php echo $i;?>"><?php echo $item['rowid'];?></span>
 											</td>
 											<td class="product-thumbnail">
@@ -178,6 +178,40 @@
                     data: {item: item,id:id1},
                     success: function (response) {
                     document.getElementById("cost_"+id).innerHTML=r;
+                    }
+                });
+    }
+  </script>
+  <script type="text/javascript">
+    function remove_cart(postid)
+    {
+      //var x = document.getElementById("cartcounter").innerHTML;
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo site_url('cart/remove_cart');?>",
+                    data:"postid="+postid,
+                    success: function (response) {
+                       // document.getElementById("cartcounter").innerHTML = --x;
+                     $("#cart_"+postid).hide();
+                    }
+                });
+    }
+  </script>
+  <script type="text/javascript">
+    function remove_cart1(postid,id)
+    {
+      var x = document.getElementById("cartcounter").innerHTML;
+      var l=document.getElementById("cost_"+postid).innerHTML;
+      var t=document.getElementById("totalcost").innerHTML;
+      var s=t-l;
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo site_url('cart/removecart');?>",
+                    data:"postid="+postid,
+                    success: function (response) {
+                        document.getElementById("cartcounter").innerHTML = --x;
+                        document.getElementById("totalcost").innerHTML=s;
+                     $("#cart_"+postid).hide();
                     }
                 });
     }
