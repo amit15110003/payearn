@@ -375,8 +375,8 @@
 										</div>
 										<div class="info">
 											<div class="author">
-												<span class="name">Leslie</span>
-												<span class="tagline">Accountant, USA</span>
+												<span class="name">Amit</span>
+												<span class="tagline">Munger</span>
 											</div>
 										</div>
 									</div>
@@ -386,8 +386,8 @@
 										</div>
 										<div class="info">
 											<div class="author">
-												<span class="name">Andrea</span>
-												<span class="tagline">Teacher, USA</span>
+												<span class="name">Ravi</span>
+												<span class="tagline">Munger</span>
 											</div>
 										</div>
 									</div>
@@ -397,8 +397,8 @@
 										</div>
 										<div class="info">
 											<div class="author">
-												<span class="name">Kenne</span>
-												<span class="tagline">Manager, USA</span>
+												<span class="name">Rahul</span>
+												<span class="tagline">Munger</span>
 											</div>
 										</div>
 									</div>
@@ -412,8 +412,8 @@
 										</div>
 										<div class="info">
 											<div class="author">
-												<span class="name">Leslie</span>
-												<span class="tagline">Accountant, USA</span>
+												<span class="name">Shubham</span>
+												<span class="tagline">Munger</span>
 											</div>
 										</div>
 									</div>
