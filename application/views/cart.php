@@ -39,7 +39,7 @@
 									    	$count++;
 									              $details=$this->user->get_product_by_id($row->p_id);
 									    ?>
-										<tr class="cart_item">
+										<tr class="cart_item" id="cart_<?php echo $row->id;?>">
 											<td class="product-remove">
 												<a class="remove" onclick="javascript:remove_cart(<?php echo $row->id;?>);">×</a>
 											</td>
