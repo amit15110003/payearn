@@ -140,6 +140,14 @@ class user extends CI_Model
 
 	}
 	//wishlist
+	function check_wish($uid,$id)
+	{
+	    $this->db->where('productid',$id);
+	    $this->db->where('u_id',$uid);
+	    $query = $this->db->get('wishlist');
+	    return $query->result();
+	}
+
 	public function showwishlist($id)
 	{	
 		$this->db->where('u_id', $id);

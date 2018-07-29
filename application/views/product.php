@@ -47,7 +47,12 @@
 												<button type="submit" class="single-add-to-cart" onclick="javascript:cartadd1(<?php echo $p_id;?>);">ADD TO CART</button>
 			                					<?php }?>
 											</div>
-											<div class="product-tool">
+											<div class="product-tool">	
+												<?php if(!empty($this->user->check_wish($this->session->userdata('uid'),$id))) {?>
+										           	<a onclick="javascript:wishlist(<?php echo $p_id;?>);" id="wish"><span id="wishtext">Added To Wishlist</span></a>
+										            <?php }else{?>
+			            							<a onclick="javascript:wishlist(<?php echo $p_id;?>);" id="wish"><span id="wishtext">Add To Wishlist</span></a>
+			          								<?php } ?>
 												<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"> Browse Wishlist </a>
 											</div>
 											<div class="product-meta">
