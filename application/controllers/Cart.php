@@ -20,10 +20,10 @@ class cart extends CI_Controller
 
 	 public function remove_cart()
     {
-    	$uid=$this->session->userdata('uid');
+    	$u_id=$this->session->userdata('u_id');
     	$id=$this->input->post('postid');
 		$this->db->delete('cart', array('id'=>$id,
-                                          'uid'=>$uid));
+                                          'u_id'=>$u_id));
     }
 
     public function itemadd()
