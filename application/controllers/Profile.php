@@ -132,7 +132,32 @@ class profile extends CI_Controller
 			}
 		}
 	}
+	public function wishlist()
+	{
+	$u_id=$this->session->userdata('u_id');
+	$postid=$this->input->post('id');
+	$checkcart = $this->db->query('select * from wishlist 
+		                            where p_id="'.$postid.'" 
+		                            and u_id = "'.$u_id.'"');
+	$resultcheckcart = $checkcart->num_rows();
 
+
+	if($resultcheckcart == '0' ){
+	$data=array('p_id'=>$postid,'u_id'=>$uid);
+	$this->db->insert('wishlist',$data);
+		echo '<script language="javascript">';
+		echo 'alert("Successfully add to cart")';
+		echo '</script>';
+	}
+	else{
+		$this->db->delete('wishlist', array('p_id'=>$postid,
+										  'u_id'=>$uid));
+		echo '<script language="javascript">';
+		echo 'alert("Already add to cart")';
+		echo '</script>';
+		}
+
+	}
     public function remove_wish()
     {
     	$uid=$this->session->userdata('uid');
