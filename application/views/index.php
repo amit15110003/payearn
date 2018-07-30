@@ -39,7 +39,11 @@
 													<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
 												</span>
 												<span class="wishlist">
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+													<?php if(!empty($this->user->check_wish($this->session->userdata('u_id'),$row->p_id))) {?>
+													<a  onclick="javascript:wishlist(<?php echo $row->p_id;?>);" id="wish" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a> 
+												   <?php }else{?>
+			            							<a  onclick="javascript:wishlist(<?php echo $row->p_id;?>);" id="wish" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a> 
+			          								<?php } ?>
 												</span>
 											</div>
 										</div>

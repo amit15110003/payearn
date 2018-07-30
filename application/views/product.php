@@ -133,48 +133,4 @@
 				</div>
 
 			</div>
-<script type="text/javascript">
-      function cartadd(id)
-      { 
-        var qty = $("#itemqty1").val();
-        alert(qty);
-        $.ajax({  
-                     type: "POST",
-                      url: "<?php echo site_url('cart/cartadd');?>",
-                      data:'&id='+id+'&qty='+qty,
-                      success: function (response) {
-                        location.reload();
-                    }
-                  });
-      }
-      </script>
-      <script type="text/javascript">
-      function cartadd1(id)
-      { 
-        var x = document.getElementById("cartcounter").innerHTML;
-        var qty = $("#itemqty1").val();
-        alert(qty);
-        $.ajax({  
-                     type: "POST",
-                      url: "<?php echo site_url('cart/cartadd1');?>",
-                      data:'&id='+id+'&qty='+qty,
-                      success: function (response) {
-                        document.getElementById("cartcounter").innerHTML = ++x;
-                       // document.getElementById("cartcounter1").innerHTML = x;
-                    }
-                  });
-      }
-      </script>
-      <script type="text/javascript">
-      function wishlist(id)
-      {
-              $.ajax({
-                      type: "POST",
-                      url: "<?php echo site_url('profile/wishlist');?>",
-                      data:"id="+id,
-                    success: function (response) {
-                     location.reload();
-                    }
-                  });
-      }
-      </script>
+ 
