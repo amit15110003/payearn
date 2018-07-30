@@ -25,19 +25,19 @@ class wishlist extends CI_Controller
 
 	 public function remove_wish()
     {
-    	$uid=$this->session->userdata('uid');
+    	$u_id=$this->session->userdata('u_id');
     	$id=$this->input->post('postid');
 		$this->db->delete('wishlist', array('id'=>$id,
-                                          'uid'=>$uid));
+                                          'u_id'=>$u_id));
     }
 	 public function move_cart()
     {
-    	$uid=$this->session->userdata('uid');
+    	$u_id=$this->session->userdata('u_id');
     	$id=$this->input->post('postid');
     	$this->db->query('INSERT INTO cart (uid,productid,attributevalue,item,hem,cuff,collar,sleeve,placket)
-                     SELECT uid,productid,attributevalue,item,hem,cuff,collar,sleeve,placket from wishlist where id='.$id.'&& uid='.$uid.'');
+                     SELECT uid,productid,attributevalue,item,hem,cuff,collar,sleeve,placket from wishlist where id='.$id.'&& uid='.$u_id.'');
         $this->db->delete('wishlist',array('id'=>$id,
-                                          'uid'=>$uid)); 
+                                          'u_id'=>$u_id)); 
     }
 	
 		

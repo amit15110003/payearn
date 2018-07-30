@@ -19,7 +19,7 @@
 											<?php foreach ($query as $row) {$details=$this->user->get_product_by_id($row->p_id);?>
 											<tr class="cart_item">
 												<td class="product-remove">
-													<a href="#" class="remove">×</a>
+													<a class="remove" onclick="javascript:remove_wish(<?php echo $row->id;?>);">×</a>
 												</td>
 												<td class="product-thumbnail">
 													<a href="shop-detail.html">
@@ -38,7 +38,7 @@
 													<span class="color">In Stock</span>
 												</td>
 												<td>
-													<a class="organik-btn small" href="#"> Add to cart </a>
+													<a class="organik-btn small" onclick="javascript:move_cart(<?php echo $row->id;?>);"> Add to cart </a>
 												</td>
 											</tr>
 										<?php }?>
@@ -50,3 +50,29 @@
 					</div>
 				</div>
 			</div>
+<script type="text/javascript">
+    function remove_wish(postid)
+    {
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo site_url('wishlist/remove_wish');?>",
+                    data:"postid="+postid,
+                    success: function (response) {
+                     location.reload();
+                    }
+                });
+    }
+  </script>
+  <script type="text/javascript">
+    function move_cart(postid)
+    {
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo site_url('wishlist/move_cart');?>",
+                    data:"postid="+postid,
+                    success: function (response) {
+                     location.reload();
+                    }
+                });
+    }
+  </script>
