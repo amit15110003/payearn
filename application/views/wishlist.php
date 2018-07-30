@@ -16,18 +16,20 @@
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach ($query as $row) {$details=$this->user->get_product_by_id($row->p_id);?>
+											<?php foreach ($query as $row) {$details=$this->user->get_product_by_id($row->p_id);
+												$p_category=str_replace(' ', '-', $details[0]->p_category);
+				$p_name=str_replace(' ', '-', $details[0]->p_name);?>
 											<tr class="cart_item">
 												<td class="product-remove">
 													<a class="remove" onclick="javascript:remove_wish(<?php echo $row->id;?>);">×</a>
 												</td>
 												<td class="product-thumbnail">
-													<a href="shop-detail.html">
+													<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 														<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $details[0]->p_image;?>" alt="">
 													</a>
 												</td>
 												<td class="product-info">
-													<a href="shop-detail.html"><?php  echo $details[0]->p_name;?></a>
+													<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>"><?php  echo $details[0]->p_name;?></a>
 													<span class="sub-title"><?php  echo $details[0]->p_category;?></span>
 													<span class="amount">Rs. <?php  echo $details[0]->p_sp;?></span>
 												</td>

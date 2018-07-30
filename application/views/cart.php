@@ -9,6 +9,8 @@
                 						if ($cart = $this->cart->contents()){$i=0;
                     					foreach ($cart as $item ) {$count++;
               							$details=$this->user->get_product_by_id($item['id']);
+              							$p_category=str_replace(' ', '-', $details[0]->p_category);
+				$p_name=str_replace(' ', '-', $details[0]->p_name);
              							?>
 										<tr class="cart_item">
 											<td class="product-remove">
@@ -16,7 +18,7 @@
 												<span class="hidden" id="itemid_<?php echo $i;?>"><?php echo $item['rowid'];?></span>
 											</td>
 											<td class="product-thumbnail">
-												<a href="shop-detail.html">
+												<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 													<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $details[0]->p_image;?>" alt="">
 												</a>
 											</td>
@@ -38,18 +40,20 @@
 									    <?php foreach ($query as $row ) {
 									    	$count++;
 									              $details=$this->user->get_product_by_id($row->p_id);
+									              $p_category=str_replace(' ', '-', $details[0]->p_category);
+				$p_name=str_replace(' ', '-', $details[0]->p_name);
 									    ?>
 										<tr class="cart_item" id="cart_<?php echo $row->id;?>">
 											<td class="product-remove">
 												<a class="remove" onclick="javascript:remove_cart(<?php echo $row->id;?>);">×</a>
 											</td>
 											<td class="product-thumbnail">
-												<a href="shop-detail.html">
+												<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 													<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $details[0]->p_image;?>" alt="">
 												</a>
 											</td>
 											<td class="product-info">
-												<a href="shop-detail.html"><?php  echo $details[0]->p_name;?></a>
+												<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>"><?php  echo $details[0]->p_name;?></a>
 												<span class="sub-title"><?php  echo $details[0]->p_category;?></span>
 												<span class="amount">Rs <span id="itemcost_<?php echo $row->id;?>"><?php  echo $details[0]->p_sp;?></span></span>
 											</td>
