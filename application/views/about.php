@@ -1,26 +1,6 @@
 <div id="main">
-				<div class="section section-bg-10 pt-11 pb-17">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<h2 class="page-title text-center">About Us</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section border-bottom pt-2 pb-2">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<ul class="breadcrumbs">
-									<li><a href="<?php echo base_url();?>">Home</a></li>
-									<li>About Us</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section pt-10 pb-6">
+				
+				<div class="section pt-3 pb-6">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12 col-lg-offset-2 col-lg-8">
@@ -31,7 +11,7 @@
 									<div class="sep-icon"><i class="organik-flower"></i></div>
 									<span class="sep-holder"><span class="sep-line"></span></span>
 								</div>
-								<p class="text-center">
+								<p class="">
 									We work to make your lifestyle easy and comfortable, for your
 									development and emergency to save your time, money and effort. We
 									serve customers request for household and other essential
@@ -40,7 +20,7 @@
 									<br />
 									<br />
 								</p>
-								<p class="text-center">
+								<p class="">
 									To make it more convenient, we have come up with online website
 									‘PAY & EARN’. For this our customer only needs to place order from
 									registered Mobile Number. It is very reliable for old and elderly people.
