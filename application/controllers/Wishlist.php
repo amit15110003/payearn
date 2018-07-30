@@ -34,8 +34,8 @@ class wishlist extends CI_Controller
     {
     	$u_id=$this->session->userdata('u_id');
     	$id=$this->input->post('postid');
-    	$this->db->query('INSERT INTO cart (uid,productid,attributevalue,item,hem,cuff,collar,sleeve,placket)
-                     SELECT uid,productid,attributevalue,item,hem,cuff,collar,sleeve,placket from wishlist where id='.$id.'&& uid='.$u_id.'');
+    	$this->db->query('INSERT INTO cart (u_id,p_id,item)
+                     SELECT u_id,p_id,item from wishlist where id='.$id.'&& u_id='.$u_id.'');
         $this->db->delete('wishlist',array('id'=>$id,
                                           'u_id'=>$u_id)); 
     }
