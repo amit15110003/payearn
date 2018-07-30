@@ -16,6 +16,7 @@
 											</tr>
 										</thead>
 										<tbody>
+											<?php foreach ($query as $row) {?>
 											<tr class="cart_item">
 												<td class="product-remove">
 													<a href="#" class="remove">×</a>
@@ -40,30 +41,7 @@
 													<a class="organik-btn small" href="#"> Add to cart </a>
 												</td>
 											</tr>
-											<tr class="cart_item">
-												<td class="product-remove">
-													<a href="#" class="remove">×</a>
-												</td>
-												<td class="product-thumbnail">
-													<a href="shop-detail.html">
-														<img src="images/shop/thumb/shop_2.jpg" alt="">
-													</a>
-												</td>
-												<td class="product-info">
-													<a href="shop-detail.html">Redish Dress</a>
-													<span class="sub-title">Consequat Quismassa</span>
-													<span class="amount">$35.00</span>
-												</td>
-												<td class="product-subtotal">
-													<span class="amount">$35.00</span>
-												</td>
-												<td class="product-stock">
-													<span class="color">In Stock</span>
-												</td>
-												<td>
-													<a class="organik-btn small" href="#"> Add to cart </a>
-												</td>
-											</tr>
+										<?php }?>
 										</tbody>
 									</table>
 								</div>

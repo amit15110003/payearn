@@ -77,32 +77,7 @@ class cart extends CI_Controller
 
 	}
 
-	 public function wishlist()
-	{
-	$uid=$this->session->userdata('uid');
-	$postid=$this->input->post('id');
-	$checkcart = $this->db->query('select * from wishlist 
-		                            where productid="'.$postid.'" 
-		                            and uid = "'.$uid.'"');
-	$resultcheckcart = $checkcart->num_rows();
-
-
-	if($resultcheckcart == '0' ){
-	$data=array('productid'=>$postid,'uid'=>$uid);
-	$this->db->insert('wishlist',$data);
-		echo '<script language="javascript">';
-		echo 'alert("Successfully add to cart")';
-		echo '</script>';
-	}
-	else{
-		$this->db->delete('wishlist', array('productid'=>$postid,
-										  'uid'=>$uid));
-		echo '<script language="javascript">';
-		echo 'alert("Already add to cart")';
-		echo '</script>';
-		}
-
-	}
+	 
 	function removecart($rowid) 
 	{
 
