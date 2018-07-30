@@ -22,14 +22,13 @@ class orders extends CI_Controller
 		
 		if ($this->form_validation->run() == FALSE)
         {
-        	$details = $this->user->get_user_by_id($this->session->userdata('uid'));
-        	$data['contact'] = $details[0]->contact;
-        	$data['fname'] = $details[0]->fname;
-        	$data['email'] = $details[0]->email;
-        	$data['lname'] = $details[0]->lname;
+        	$details = $this->user->get_user_by_id($this->session->userdata('u_id'));
+        	$data['u_contact'] = $details[0]->u_contact;
+        	$data['u_name'] = $details[0]->u_name;
+        	$data['u_mail'] = $details[0]->u_mail;
+        	$data['u_lname'] = $details[0]->u_lname;
         	$data['address'] = $details[0]->address;
-        	$details['category']=$this->user->showcategory();
-			$this->load->view('header',$details);
+			$this->load->view('header');
 			$this->load->view('profile',$data);
         }
 		else
