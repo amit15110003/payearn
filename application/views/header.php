@@ -89,64 +89,80 @@
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="pt-4 pb-4">
-																	<h3>Shop Pages</h3>
+																	<h3>Categories</h3>
 																	<ul>
 																		<?php 
-															                $details=$this->user->showcategory();
-															                foreach ($details as $row ) {
+															                $details=$this->user->showcategory(); $i=0;
+															                foreach ($details as $row ) {if($i%4==0){
 															                  $c_name=str_replace(' ', '-', $row->c_name);?>
+															                
 															          <li>
 															            <a href="<?php echo base_url("index.php/product/category/$c_name"); ?>">
 															            <?php echo $row->c_name;?></a>
 															          </li>
-															        <?php }?>
+															        <?php }$i++;}?>
 																		
 																	</ul>
 																</div>
 															</div>
-															<div class="col-sm-2">
+
+															<div class="col-sm-3">
 																<div class="pt-4 pb-4">
-																	<h3>Fruits</h3>
+																	
 																	<ul>
-																		<li><a href="#">Seville Orange</a></li>
-																		<li><a href="#">Aurore Grape</a></li>
-																		<li><a href="#">Tieton Cherry</a></li>
-																		<li class="new"><a href="#">Tomato Juice</a></li>
-																		<li><a href="#">Cauliflower</a></li>
-																	</ul>
-																</div>
-															</div>
-															<div class="col-sm-2">
-																<div class="pt-4 pb-4">
-																	<h3>Featured</h3>
-																	<ul>
-																		<li><a href="#">Sprouting Broccoli</a></li>
-																		<li class="sale"><a href="#">Chinese Cabbage</a></li>
-																		<li><a href="#">Cara Orange</a></li>
-																		<li><a href="#">Cauliflower</a></li>
-																		<li><a href="#">Tomato Juice</a></li>
-																	</ul>
-																</div>
-															</div>
-															<div class="col-sm-2">
-																<div class="pt-4 pb-4">
-																	<h3>Best Seller</h3>
-																	<ul>
-																		<li><a href="#">Uvina Grape</a></li>
-																		<li><a href="#">Seville Orange</a></li>
-																		<li><a href="#">Aurore Grape</a></li>
-																		<li><a href="#">Tieton Cherry</a></li>
-																		<li class="new"><a href="#">Tomato Juice</a></li>
-																		<li><a href="#">Sprouting Broccoli</a></li>
+																		<?php 
+															                $details=$this->user->showcategory(); $i=0;
+															                foreach ($details as $row ) {if($i%4==1){
+															                  $c_name=str_replace(' ', '-', $row->c_name);?>
+															                
+															          <li>
+															            <a href="<?php echo base_url("index.php/product/category/$c_name"); ?>">
+															            <?php echo $row->c_name;?></a>
+															          </li>
+															        <?php }$i++;}?>
+																		
 																	</ul>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="pt-4 pb-4">
-																	<img src="<?php echo base_url();?>media/images/megamenu_ads.jpg" alt="" />
+																	
+																	<ul>
+																		<?php 
+															                $details=$this->user->showcategory(); $i=0;
+															                foreach ($details as $row ) {if($i%4==2){
+															                  $c_name=str_replace(' ', '-', $row->c_name);?>
+															                
+															          <li>
+															            <a href="<?php echo base_url("index.php/product/category/$c_name"); ?>">
+															            <?php echo $row->c_name;?></a>
+															          </li>
+															        <?php }$i++;}?>
+																		
+																	</ul>
 																</div>
 															</div>
-														</div>
+															<div class="col-sm-3">
+																<div class="pt-4 pb-4">
+																	
+																	<ul>
+																		<?php 
+															                $details=$this->user->showcategory(); $i=0;
+															                foreach ($details as $row ) {if($i%4==3){
+															                  $c_name=str_replace(' ', '-', $row->c_name);?>
+															                
+															          <li>
+															            <a href="<?php echo base_url("index.php/product/category/$c_name"); ?>">
+															            <?php echo $row->c_name;?></a>
+															          </li>
+															        <?php }$i++;}?>
+																		
+																	</ul>
+																</div>
+															</div>
+
+
+															
 													</div>
 												</li>
 											</ul>

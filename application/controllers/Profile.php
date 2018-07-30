@@ -85,7 +85,7 @@ class profile extends CI_Controller
         }
 		else
 		{
-			$id=$this->session->userdata('uid');
+			$id=$this->session->userdata('u_id');
 		    $u_name=$_POST['u_name'];
 		    $u_lname=$_POST['u_lname'];
 		    $u_contact=$_POST['u_contact'];
@@ -108,16 +108,16 @@ class profile extends CI_Controller
 
 	public function password()
 	{	
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|md5');
+		$this->form_validation->set_rules('pass', 'Password', 'trim|required|md5');
 		if ($this->form_validation->run() == FALSE)
         {
         	redirect('profile');
         }
 		else
 		{
-			$id=$this->session->userdata('uid');
-		    $password=$_POST['password'];
-			$result=$this->user->updatepass($id, $password);
+			$id=$this->session->userdata('u_id');
+		    $password=$_POST['pass'];
+			$result=$this->user->update_password($id, $password);
 
 		if ($result)
 			{
@@ -168,8 +168,8 @@ class profile extends CI_Controller
     
     public function address()
     {
-    	$this->form_validation->set_rules('u_name', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]');
-		$this->form_validation->set_rules('u_lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]');
+    	$this->form_validation->set_rules('d_fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]');
+		$this->form_validation->set_rules('d_lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]');
 		
 		if ($this->form_validation->run() == FALSE)
         {

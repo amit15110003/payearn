@@ -13,6 +13,7 @@ class Product extends CI_Controller {
 
 	public function index($category)
 	{	
+
 		$details['query']=$this->user->showproduct();
 		$details['category']=$this->user->showcategory();
 		$this->load->view('header',$details);
@@ -41,9 +42,10 @@ class Product extends CI_Controller {
 
 	public function details($p_category,$p_name)
 	{	
+
 		$p_category = str_replace('%20', ' ', $p_category);
 		$details=$this->user->get_product_id($p_category,$p_name);
-		$data['query2']=$this->user->showproduct_mostview_cat($p_category);
+		$data['query2']=$this->user->showproduct_mostview_cat1($p_category);
 			$data['p_id'] = $details[0]->p_id;
 			$data['p_image'] = $details[0]->p_image;
 			$data['p_name'] = $details[0]->p_name;

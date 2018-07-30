@@ -15,6 +15,7 @@ class Shop extends CI_Controller {
 	public function index()
 	{
 		$details['query']=$this->user->showproduct_mostview_cat();
+		$details['query1']=$this->user->showproduct_recent();
 		$this->load->view('header');
 		$this->load->view('index',$details);
 		$this->load->view('footer');

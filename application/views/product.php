@@ -79,20 +79,59 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12"><br><br>
 										
 										<div class="related">
 											<div class="related-title"><br>
 												<div class="text-center mb-1 section-pretitle fz-34">Related</div>
 												<h2 class="text-center section-title mtn-2 fz-24">Products</h2>
 											</div>
+											<div class="organik-seperator center">
+									<span class="sep-holder"><span class="sep-line"></span></span>
+									<div class="sep-icon"><i class="organik-flower"></i></div>
+									<span class="sep-holder"><span class="sep-line"></span></span><br>
+								</div><br><br>
+											<div class="product-grid masonry-grid-post">
+								<?php foreach ($query2 as $row ) {
+				$p_category=str_replace(' ', '-', $row->p_category);
+				$p_name=str_replace(' ', '-', $row->p_name);?>
+								<div class="col-md-3 col-sm-6 product-item masonry-item text-center juice">
+									<div class="product-thumb">
+											<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
+												<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $row->p_image;?>" alt="" />
+											</a>
+											<div class="product-action">
+												<span class="add-to-cart">
+													<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+												</span>
+												<span class="wishlist">
+													<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+												</span>
+											</div>
 										</div>
+										<div class="product-info">
+											<a href="shop-detail.html">
+												<h2 class="title"><?php echo $p_name;?></h2>
+												<span class="price">
+													<del><?php echo $row->p_cp;?></del> 
+													<ins><?php echo $row->p_sp;?></ins>
+												</span>
+											</a>
+										</div>
+								</div>
+       							<?php }?>
+							</div>
+
+										</div>
+
+
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 <script type="text/javascript">
       function cartadd(id)

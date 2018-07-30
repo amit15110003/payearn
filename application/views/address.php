@@ -1,26 +1,21 @@
-<div class="container-fluid" style="padding:10% 5%;">
-    <div class="col-md-12">
+<div class="container-fluid" style="padding:2% 5%;">
+    <div class="col-md-8 col-md-offset-2">
         <ol class="breadcrumb">
-                  <li><a class="hitem hidden-xs" href="#">User Profile</a></li>
+                  <li><a class="hitem hidden-xs" href="#">ADDRESS</a></li>
         </ol>
     </div>  
-    <div class="col-md-2 mini-menu hidden-xs">
-        <ul><a href="<?php echo base_url("index.php/profile"); ?>" class="hitem" >My Account</a><br><br>
-            <li><a class="cont" href="<?php echo base_url("index.php/orders"); ?>"> Orders</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/wishlist"); ?>"> Wishlist</a></li>
-            <li><a class="cont" style="color: black;" href="<?php echo base_url("index.php/profile/address"); ?>"">Address</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/profile/account_details"); ?>">Account details</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/home/logout"); ?>">Logout</a></li>
-        </ul>
-    </div>
-    <div class="col-md-9 col-md-offset-1">
+    
+    <div class="col-md-8 col-md-offset-2">
     	<!-- Edit existing address -->
     	<?php foreach ($query as $row) {?>
         <div class="col-md-12  col-xs-12 clps">
           <div class="col-md-12  col-xs-12">
             <div class="col-md-8 col-xs-12">
-              <p>Address</p>
+              
               <p style="text-transform: capitalize;"><?php echo $row->d_fname;?> <?php echo $row->d_lname;?></p>
+              <p style="text-transform: capitalize;"><?php echo $row->d_add;?> , <?php echo $row->d_town;?></p>
+              <p style="text-transform: capitalize;"><?php echo $row->d_state;?> ,  <?php echo $row->d_pin;?></p>
+              <p style="text-transform: capitalize;"><?php echo $row->d_mob;?></p><hr>
             </div>
             <div class="col-md-2 col-xs-12 th-pb">
               <button type="button" class="th-btn-inv-sm cbtn  col-xs-12" data-toggle="collapse" data-target="#address<?php echo $row->id;?>">Edit</button>
@@ -70,12 +65,9 @@
     	<!-- Add new address -->
         <div class="col-md-12  col-xs-12 clps">
           <div class="col-md-12  col-xs-12">
-            <div class="col-md-10 col-xs-12">
-              <p>Add New</p>
-              <p style="text-transform: capitalize;">+</p>
-            </div>
-            <div class="col-md-2 col-xs-12 th-pb">
-              <button type="button" class="th-btn-inv-sm cbtn  col-xs-12" data-toggle="collapse" data-target="#add_ress">Add</button>
+            
+            <div class="col-md-3 col-xs-12 th-pb">
+              <button type="button" class="th-btn-inv-sm cbtn  col-xs-12" data-toggle="collapse" data-target="#add_ress">Add New Address</button>
             </div>
           </div>
           <div id="add_ress" class="collapse col-md-12  col-xs-12 ">

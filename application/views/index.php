@@ -88,268 +88,65 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="col-md-4 col-sm-6">
 								<div class="organik-product-column">
 									<h2 class="title">Top Rated</h2>
 									<div class="product-slider">
 										<div class="slider">
+											<?php $i=0; foreach ($query1 as $row ) {if($i%2==0){
+				$p_category=str_replace(' ', '-', $row->p_category);
+				$p_name=str_replace(' ', '-', $row->p_name);?>
+				<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 											<div class="product-item">
 												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_9.jpg" alt="" />
+													
+												<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $row->p_image;?>" alt="" class="image-responsive center-block" style="height:120px; width: 100%;" />
+											
 												</div>
 												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Tomato</a></span>
-													<div class="product-price">$20.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
+													<span class="product-title"><?php echo $p_name;?></span>
+													
+												</span>
+												<div class="product-price"> Rs. <?php echo $row->p_sp;?></div>
+													<div class="product-categories">
+														<a href="#"><?php echo $row->p_category;?></a>
 													</div>
 												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_5.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Carrot</a></span>
-													<div class="product-price">$9.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_10.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Carrot Juice</a></span>
-													<div class="product-price">$35.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="slider">
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_8.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Tieton Cherry</a></span>
-													<div class="product-price">$9.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_11.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Beetroot Juice</a></span>
-													<div class="product-price">$35.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_12.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Seville Orange</a></span>
-													<div class="product-price">$3.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="slider">
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_13.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Tropical Twist</a></span>
-													<div class="product-price">$20.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_14.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Banana Marshmallow</a></span>
-													<div class="product-price">$12.00</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_15.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Almonds</a></span>
-													<div class="product-price">
-														<del>$15.00</del> 
-														<ins>$12.00</ins>
-													</div>
-													<div class="product-rate">
-														<div class="star-rating">
-															<span style="width:100%;"></span>
-														</div>
-													</div>
-												</div>
-											</div>
+											</div></a>
+											<?php  }$i++;}?>
+											
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-6">
 								<div class="organik-product-column">
-									<h2 class="title">Best Seller</h2>
+									<h2 class="title">Top Rated</h2>
 									<div class="product-slider">
 										<div class="slider">
+											<?php $i=0; foreach ($query1 as $row ) {if($i%2!=0){
+				$p_category=str_replace(' ', '-', $row->p_category);
+				$p_name=str_replace(' ', '-', $row->p_name);?>
+				<a href="<?php echo base_url("index.php/product/details/$p_category/$p_name"); ?>">
 											<div class="product-item">
 												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_14.jpg" alt="" />
+													
+												<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $row->p_image;?>" alt="" class="image-responsive center-block" style="height:120px; width: 100%;" />
+											
 												</div>
 												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Banana Marshmallow</a></span>
-													<div class="product-price">$12.00</div>
+													<span class="product-title"><?php echo $p_name;?></span>
+													
+												</span>
+												<div class="product-price"> Rs. <?php echo $row->p_sp;?></div>
 													<div class="product-categories">
-														<a href="#">Dried</a>
+														<a href="#"><?php echo $row->p_category;?></a>
 													</div>
 												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_5.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Cucumber</a></span>
-													<div class="product-price">$18.00</div>
-													<div class="product-categories">
-														<a href="#">Vegetables</a>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_17.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Corn Flour</a></span>
-													<div class="product-price">$15.00</div>
-													<div class="product-categories">
-														<a href="#">Dried</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="slider">
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_11.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Beetroot Juice</a></span>
-													<div class="product-price">$35.00</div>
-													<div class="product-categories">
-														<a href="#">Juice</a>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_12.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Seville Orange</a></span>
-													<div class="product-price">$3.00</div>
-													<div class="product-categories">
-														<a href="#">Fruits</a>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_9.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Tomato</a></span>
-													<div class="product-price">$20.00</div>
-													<div class="product-categories">
-														<a href="#">Vegetables</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="slider">
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_2.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Aurore Grape</a></span>
-													<div class="product-price">$9.00</div>
-													<div class="product-categories">
-														<a href="#">Fruits</a>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_2.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Sienevyi Pomegranate</a></span>
-													<div class="product-price">$3.00</div>
-													<div class="product-categories">
-														<a href="#">Fruits</a>
-													</div>
-												</div>
-											</div>
-											<div class="product-item">
-												<div class="product-thumb">
-													<img src="<?php echo base_url();?>media/images/shop/shop_1.jpg" alt="" />
-												</div>
-												<div class="product-info">
-													<span class="product-title"><a href="shop-detail.html">Orange Juice</a></span>
-													<div class="product-price">
-														<del>$15.00</del> 
-														<ins>$12.00</ins>
-													</div>
-													<div class="product-categories">
-														<a href="#">Juice</a>
-													</div>
-												</div>
-											</div>
+											</div></a>
+											<?php  }$i++;}?>
+											
 										</div>
 									</div>
 								</div>

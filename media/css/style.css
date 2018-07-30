@@ -4534,7 +4534,8 @@ header.header-4 .mini-cart-wrap .mini-cart .mini-cart-icon {
     z-index: 96;
 }
 .product-item .product-thumb img {
-    width: 100%;
+    width: auto;
+    height: 220px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;

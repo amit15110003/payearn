@@ -27,6 +27,19 @@ class user extends CI_Model
         $query = $this->db->get('user');
 		return $query->result();
 	}
+	function update($id, $u_name, $u_lname, $u_contact)
+    {	
+    	$data = array('u_name'=>$u_name, 'u_lname'=>$u_lname, 'u_contact'=>$u_contact);
+    	$this->db->where('u_id', $id);
+		return $this->db->update('user', $data);
+	}
+	function update_password($id, $password)
+    {	
+    	$data = array('u_pass'=>$password);
+    	$this->db->where('u_id', $id);
+		return $this->db->update('user', $data);
+	}
+
 	//address
 	public function deliveryadd($u_id)
 	{	
@@ -106,6 +119,21 @@ class user extends CI_Model
 	public function showproduct_mostview_cat()
 	{ 	$this->db->limit(8);
 		$this->db->order_by("p_view", "desc");
+		$this->db->where('p_status', "1");
+		$query=$this->db->get('product');
+		return $query->result();
+	}
+	public function showproduct_mostview_cat1($p_category)
+	{ 	$this->db->limit(4);
+		$this->db->order_by("p_view", "desc");
+		$this->db->where('p_category', $p_category);
+		$this->db->where('p_status', "1");
+		$query=$this->db->get('product');
+		return $query->result();
+	}
+	public function showproduct_recent()
+	{ 	$this->db->limit(6);
+		$this->db->order_by("p_time", "desc");
 		$this->db->where('p_status', "1");
 		$query=$this->db->get('product');
 		return $query->result();

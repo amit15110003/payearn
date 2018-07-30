@@ -1,25 +1,18 @@
-<div class="container-fluid" style="padding:10% 5%;">
-    <div class="col-md-12">
+<div class="container-fluid" style="padding:2% 5%;">
+    <div class="col-md-8 col-md-offset-2">
         <ol class="breadcrumb">
                   <li><a class="hitem hidden-xs" href="#">User Profile</a></li>
         </ol>
     </div>  
-    <div class="col-md-2 mini-menu hidden-xs">
-        <ul><a href="<?php echo base_url("index.php/profile"); ?>" class="hitem" >My Account</a><br><br>
-            <li><a class="cont" href="<?php echo base_url("index.php/orders"); ?>"> Orders</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/wishlist"); ?>"> Wishlist</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/profile/address"); ?>"">Address</a></li>
-            <li><a class="cont" style="color: black;" href="<?php echo base_url("index.php/profile/account_details"); ?>">Account details</a></li>
-            <li><a class="cont" href="<?php echo base_url("index.php/home/logout"); ?>">Logout</a></li>
-        </ul>
-    </div>
-    <div class="col-md-9 col-md-offset-1">
+    
+    <div class="col-md-8 col-md-offset-2">
       <!-- Edit Account Details -->
         <div class="col-md-12  col-xs-12 clps">
           <div class="col-md-12  col-xs-12">
             <div class="col-md-10 col-xs-12">
-              <p>Account Details</p>
-              <p style="text-transform: capitalize;"><?php echo $u_name;?></p>
+              <p><b>Account Details</b></p>
+              <p style="text-transform: capitalize;"><?php echo $u_name;?> <?php echo $u_lname;?></p>
+              <p style="text-transform: capitalize;"><?php echo $u_contact;?></p><hr>
             </div>
             <div class="col-md-2 col-xs-12 th-pb">
               <button type="button" class="th-btn-inv-sm cbtn col-md-12 col-xs-12" data-toggle="collapse" data-target="#address">Edit</button>
@@ -38,7 +31,7 @@
               </div>
               <div class="col-md-6">
                 <label>Phone <span style="color: red;">*</span></label>
-                <input class="th-btn-inv col-md-12 th-form" type="number" name="u_contact" value="<?php echo $u_contact; ?>" required>
+                <input class="th-btn-inv col-md-12 th-form" type="number" name="u_contact" value="<?php echo $u_contact; ?>" readonly><br>
               </div>
               <div class="col-md-12 th-pt">
                 <button type="submit" class="btn th-btn col-md-3 col-xs-12" data-toggle="collapse" data-target="#address">Update</button>
@@ -50,7 +43,7 @@
         <div class="col-md-12  col-xs-12 clps">
           <div class="col-md-12  col-xs-12">
             <div class="col-md-10 col-xs-12">
-              <p>Password Change</p>
+              <p><b>Change Password</b></p>
               <p style="text-transform: capitalize;">************</p>
             </div>
             <div class="col-md-2 col-xs-12 th-pb ">
