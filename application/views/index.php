@@ -36,7 +36,11 @@
 											</a>
 											<div class="product-action">
 												<span class="add-to-cart">
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+													<?php if(!empty($this->session->userdata('u_id'))){?>
+													<a onclick="javascript:cartadd(<?php echo $row->p_id;?>);" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+			                					<?php }else{?>
+													<a onclick="javascript:cartadd1(<?php echo $row->p_id;?>);" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+			                					<?php }?>
 												</span>
 												<span class="wishlist">
 													<?php if(!empty($this->user->check_wish($this->session->userdata('u_id'),$row->p_id))) {?>
