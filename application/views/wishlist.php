@@ -16,23 +16,23 @@
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach ($query as $row) {?>
+											<?php foreach ($query as $row) {$details=$this->user->get_product_by_id($row->p_id);?>
 											<tr class="cart_item">
 												<td class="product-remove">
 													<a href="#" class="remove">×</a>
 												</td>
 												<td class="product-thumbnail">
 													<a href="shop-detail.html">
-														<img src="images/shop/thumb/shop_1.jpg" alt="">
+														<img src="<?php echo base_url();?>uploads/product/thumb/<?php echo $details[0]->p_image;?>" alt="">
 													</a>
 												</td>
 												<td class="product-info">
-													<a href="shop-detail.html">Black Hoodie</a>
-													<span class="sub-title">Faucibus Tincidunt</span>
-													<span class="amount">$2.00</span>
+													<a href="shop-detail.html"><?php  echo $details[0]->p_name;?></a>
+													<span class="sub-title"><?php  echo $details[0]->p_category;?></span>
+													<span class="amount">Rs. <?php  echo $details[0]->p_sp;?></span>
 												</td>
 												<td class="product-subtotal">
-													<span class="amount">$2.00</span>
+													<span class="amount">Rs. <?php  echo $details[0]->p_sp;?></span>
 												</td>
 												<td class="product-stock">
 													<span class="color">In Stock</span>
