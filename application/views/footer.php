@@ -103,7 +103,6 @@
       function cartadd(id)
       { 
         var qty = $("#itemqty1").val();
-        alert(qty);
         $.ajax({  
                      type: "POST",
                       url: "<?php echo site_url('cart/cartadd');?>",
@@ -119,14 +118,12 @@
       { 
         var x = document.getElementById("cartcounter").innerHTML;
         var qty = $("#itemqty1").val();
-        alert(qty);
         $.ajax({  
                      type: "POST",
                       url: "<?php echo site_url('cart/cartadd1');?>",
                       data:'&id='+id+'&qty='+qty,
                       success: function (response) {
-                        document.getElementById("cartcounter").innerHTML = ++x;
-                       // document.getElementById("cartcounter1").innerHTML = x;
+                        location.reload();
                     }
                   });
       }

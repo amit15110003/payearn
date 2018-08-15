@@ -36,6 +36,7 @@
 											</a>
 											<div class="product-action">
 												<span class="add-to-cart">
+													<input type="hidden" name="quantity" value="1" id="itemqty1">
 													<?php if(!empty($this->session->userdata('u_id'))){?>
 													<a onclick="javascript:cartadd(<?php echo $row->p_id;?>);" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
 			                					<?php }else{?>
@@ -43,11 +44,12 @@
 			                					<?php }?>
 												</span>
 												<span class="wishlist">
-													<?php if(!empty($this->user->check_wish($this->session->userdata('u_id'),$row->p_id))) {?>
+													<?php  if(!empty($this->session->userdata('u_id')))  {if(!empty($this->user->check_wish($this->session->userdata('u_id'),$row->p_id))) {?>
 													<a  onclick="javascript:wishlist(<?php echo $row->p_id;?>);" id="wish" data-toggle="tooltip" data-placement="top" title="Added to wishlist"></a> 
 												   <?php }else{?>
 			            							<a  onclick="javascript:wishlist(<?php echo $row->p_id;?>);" id="wish" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a> 
-			          								<?php } ?>
+			          								<?php }}else{?>
+			          									<a  href="<?php echo base_url();?>index.php/login" id="wish" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a><?php }?>
 												</span>
 											</div>
 										</div>

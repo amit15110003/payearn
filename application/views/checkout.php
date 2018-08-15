@@ -23,7 +23,7 @@
 										<div class="col-md-12">
 											<label>Name <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_name" value=""  />
+												<input type="text" name="delivery_name" value="" required />
 											</div>
 										</div>
 									</div>
@@ -31,7 +31,7 @@
 										<div class="col-md-12">
 											<label>Country <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_country" value="India" size="40"  readonly />
+												<input type="text" name="delivery_country" value="India" size="40"  readonly  required/>
 											</div>
 										</div>
 									</div>
@@ -39,7 +39,7 @@
 										<div class="col-md-12">
 											<label>Address <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_address" value="" size="40" />
+												<input type="text" name="delivery_address" value="" size="40" required/>
 											</div>
 										</div>
 									</div>
@@ -47,7 +47,7 @@
 										<div class="col-md-12">
 											<label>Postcode / ZIP</label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_zip" value="" size="40" />
+												<input type="text" name="delivery_zip" value="" size="40" required/>
 											</div>
 										</div>
 									</div>
@@ -55,13 +55,13 @@
 										<div class="col-md-6">
 											<label>Town/City <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_city" value="" size="40" />
+												<input type="text" name="delivery_city" value="" size="40" required/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<label>State <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_state" value="" size="40" />
+												<input type="text" name="delivery_state" value="" size="40" required/>
 											</div>
 										</div>
 									</div>
@@ -69,13 +69,13 @@
 										<div class="col-md-6">
 											<label>Phone</label>
 											<div class="form-wrap">
-												<input type="text" name="delivery_tel" value="" size="40" />
+												<input type="text" name="delivery_tel" value="" size="40" required/>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<label>Email <span class="required">*</span></label>
 											<div class="form-wrap">
-												<input type="email" name="delivery_email" value="" size="40" />
+												<input type="email" name="delivery_email" value=""  required/>
 											</div>
 										</div>
 									</div>
