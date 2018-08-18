@@ -20,6 +20,12 @@ class usermodal extends CI_Model
         $query = $this->db->get('user');
 		return $query->result();
 	}
+	function get_user_wid($wid)
+	{	
+		$this->db->where('u_wid', $wid);
+        $query = $this->db->get('user');
+		return $query->result();
+	}
 	function add_user($data)
 	{
 		return $this->db->insert('user', $data);

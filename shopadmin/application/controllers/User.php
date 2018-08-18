@@ -16,7 +16,14 @@ class User extends CI_Controller {
 
 	}
 	public function index()
-	{   $data['query']=$this->usermodal->get_user();
+	{   
+		if($this->session->userdata('a_design')=="Admin")
+		{
+		$data['query']=$this->usermodal->get_user();
+	    }
+	    elseif($this->session->userdata('a_design')=="Vendor")
+	    {$data['query']=$this->usermodal->get_user_wid($this->session->userdata('a_wid'));}
+	    else{$data['query']="";}
 		$this->load->view('header');
 		$this->load->view('viewuser',$data);
 		$this->load->view('footer');

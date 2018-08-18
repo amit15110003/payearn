@@ -275,6 +275,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</ul>
 				</div>
 			</li>
+			<?php if($this->session->userdata('a_design')=="Admin"){?>
             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
             		<i class="m-menu__link-icon fa fa-briefcase"></i>
@@ -314,6 +315,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             		<span class="m-menu__link-text">Members</span>
             	</a>
 			</li>
+		    <?php }?>
             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
             	<a  href="#" class="m-menu__link m-menu__toggle">
             		<i class="m-menu__link-icon fa fa-gear"></i>
