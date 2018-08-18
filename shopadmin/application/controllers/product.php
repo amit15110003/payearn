@@ -59,7 +59,9 @@ class product extends CI_Controller {
             }else{
                 $picture = '';
             }
-		
+            if($this->session->userdata('a_wid')){
+		    $wid=$this->session->userdata('a_wid');}
+		    else{$wid=0;}
 			$data = array
 			(
 				'p_name' => $this->input->post('p_name'),
@@ -69,7 +71,7 @@ class product extends CI_Controller {
 				'p_sp' => $this->input->post('p_sp'),
 				'p_stock' => $this->input->post('p_stock'),
 				'p_category' => $this->input->post('p_category'),
-
+				'p_warehouse' => $wid,
 				'p_status' => $this->input->post('p_status'),
 				'p_image' => $picture
 			);
