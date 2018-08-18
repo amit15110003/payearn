@@ -156,5 +156,49 @@ class admin extends CI_Model
         $query = $this->db->get('orderpos');
 		return $query->result();
 	}
+	function countproduct()
+	{
+		$this->db->select_sum('p_id');
+	    $this->db->from('product');
 
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
+	function countsell()
+	{
+		$this->db->select_sum('order_id');
+	    $this->db->from('orderpos');
+
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
+	function countsubscriber()
+	{
+		$this->db->select_sum('id');
+	    $this->db->from('subscribe');
+
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
 }?>

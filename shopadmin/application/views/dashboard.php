@@ -193,10 +193,10 @@
 							<i class="flaticon-truck m--font-brand"></i>             
 						</span> 
 						<span class="m-widget17__subtitle">
-							Delivered
+							Order
 						</span> 
 						<span class="m-widget17__desc">
-							15 New Paskages
+							<?php $detail2=$this->admin->countsell(); echo $detail2; ?> New Paskages
 						</span>  
 					</div>
 					<div class="m-widget17__item">
@@ -207,7 +207,7 @@
 							Reporeted
 						</span> 
 						<span class="m-widget17__desc">
-							72 Support Cases
+							<?php $detail1=$this->admin->countproduct(); echo $detail1; ?> Support Cases
 						</span>  
 					</div>
 				</div>
@@ -217,10 +217,10 @@
 							<i class="flaticon-pie-chart m--font-success"></i>
 						</span>  
 						<span class="m-widget17__subtitle">
-							Ordered
+							Product
 						</span> 
 						<span class="m-widget17__desc">
-							72 New Items
+							<?php $detail1=$this->admin->countproduct(); echo $detail1; ?> New Items
 						</span>  
 					</div>
 					<div class="m-widget17__item">
