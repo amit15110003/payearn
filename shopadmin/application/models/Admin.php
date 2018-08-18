@@ -156,6 +156,22 @@ class admin extends CI_Model
         $query = $this->db->get('orderpos');
 		return $query->result();
 	}
+	function countproduct_wid($wid)
+	{
+		$this->db->select_sum('p_id');
+		$this->db->where('p_warehouse', $wid);
+	    $this->db->from('product');
+
+	    $total_a = $this->db->count_all_results();
+
+	    if ($total_a > 0)
+	    {
+	        return $total_a;
+	    }
+
+	    return NULL;
+
+	}
 	function countproduct()
 	{
 		$this->db->select_sum('p_id');
@@ -171,9 +187,11 @@ class admin extends CI_Model
 	    return NULL;
 
 	}
-	function countsell()
+	function countsell($date,$wid)
 	{
 		$this->db->select_sum('order_id');
+		$this->db->where('o_time =', $date);
+		$this->db->where('o_wid', $wid);
 	    $this->db->from('orderpos');
 
 	    $total_a = $this->db->count_all_results();
@@ -186,10 +204,10 @@ class admin extends CI_Model
 	    return NULL;
 
 	}
-	function countsubscriber()
+	function countuser()
 	{
-		$this->db->select_sum('id');
-	    $this->db->from('subscribe');
+		$this->db->select_sum('u_id');
+	    $this->db->from('user');
 
 	    $total_a = $this->db->count_all_results();
 

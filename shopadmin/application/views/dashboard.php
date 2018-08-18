@@ -59,13 +59,7 @@
 	<div class="m-portlet__body">
 		<!--begin::Widget5-->
 		<div class="m-widget4">
-			<div class="m-widget4__chart m-portlet-fit--sides m--margin-top-10 m--margin-top-20" style="height:260px;">
-				<canvas id="m_chart_trends_stats"></canvas>
-			</div>
 			<div class="m-widget4__item">
-				<div class="m-widget4__img m-widget4__img--logo">							 
-					<img src="assets/app/media/img/client-logos/logo3.png" alt="">
-				</div>
 				<div class="m-widget4__info">
 					<span class="m-widget4__title">
 					Phyton  
@@ -79,35 +73,29 @@
 				</span>	
 			</div>
 			<div class="m-widget4__item">
-				<div class="m-widget4__img m-widget4__img--logo">									 
-					<img src="assets/app/media/img/client-logos/logo1.png" alt="">
-				</div>
 				<div class="m-widget4__info">
 					<span class="m-widget4__title">
-					FlyThemes  
+					User  
 					</span><br> 
 					<span class="m-widget4__sub">
-					A Let's Fly Fast Again Language
+					All User
 					</span>		 
 				</div>
 				<span class="m-widget4__ext">
-					<span class="m-widget4__number m--font-danger">+$300</span>
+					<span class="m-widget4__number m--font-danger"><?php $detail1=$this->admin->countuser(); echo $detail1; ?></span>
 				</span>	
 			</div>
 			<div class="m-widget4__item">
-				<div class="m-widget4__img m-widget4__img--logo">									 
-					<img src="assets/app/media/img/client-logos/logo2.png" alt="">
-				</div>
 				<div class="m-widget4__info">
 					<span class="m-widget4__title">
-					AirApp  
+					Total Product  
 					</span><br> 
 					<span class="m-widget4__sub">
-					Awesome App For Project Management
+					All Warehouse
 					</span>		 
 				</div>
 				<span class="m-widget4__ext">
-					<span class="m-widget4__number m--font-danger">+$6700</span>
+					<span class="m-widget4__number m--font-danger"><?php $detail1=$this->admin->countproduct(); echo $detail1; ?></span>
 				</span>	
 			</div>
 		</div>
@@ -181,11 +169,6 @@
 	</div>
 	<div class="m-portlet__body">
 		<div class="m-widget17">
-			<div class="m-widget17__visual m-widget17__visual--chart m-portlet-fit--top m-portlet-fit--sides m--bg-danger">
-				<div class="m-widget17__chart" style="height:320px;">
-					<canvas id="m_chart_activities"></canvas>
-				</div>
-			</div>
 			<div class="m-widget17__stats">
 				<div class="m-widget17__items m-widget17__items-col1">
 					<div class="m-widget17__item">
@@ -193,10 +176,10 @@
 							<i class="flaticon-truck m--font-brand"></i>             
 						</span> 
 						<span class="m-widget17__subtitle">
-							Order
+							Today's Sell
 						</span> 
 						<span class="m-widget17__desc">
-							<?php $detail2=$this->admin->countsell(); echo $detail2; ?> New Paskages
+							<?php $date=date('Y-m-d');$detail2=$this->admin->countsell($date,$this->session->userdata('a_wid')); echo $detail2; ?> New Paskages
 						</span>  
 					</div>
 					<div class="m-widget17__item">
@@ -207,7 +190,7 @@
 							Reporeted
 						</span> 
 						<span class="m-widget17__desc">
-							<?php $detail1=$this->admin->countproduct(); echo $detail1; ?> Support Cases
+							<?php $detail1=$this->admin->countproduct_wid($this->session->userdata('a_wid')); echo $detail1; ?> Support Cases
 						</span>  
 					</div>
 				</div>
