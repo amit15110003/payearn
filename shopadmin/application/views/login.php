@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 						<div class="m-login__logo">
 							<a href="#">
-							<img src="<?php echo base_url();?>assets/app/media/img/logos/logo-2.png">  	
+							<img src="<?php echo base_url();?>assets/app/media/img/logos/logosm.png">  	
 							</a>
 						</div>
 
@@ -152,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="m-grid__item m-grid__item--middle">
 			<h3 class="m-login__welcome">Join Our Community</h3>
 			<p class="m-login__msg">
-				Lorem ipsum dolor sit amet, coectetuer adipiscing<br>elit sed diam nonummy et nibh euismod
+				
 			</p>
 		</div>
 	</div>
