@@ -18,9 +18,15 @@ class Order extends CI_Controller {
 
 	public function index()
 	{   
-		$details['query'] = $this->admin->get_order();
+		if($this->session->userdata('a_design')=="Admin")
+		{
+		$data['query']=$this->admin->get_order();
+	    }
+	    elseif($this->session->userdata('a_design')=="Vendor")
+	    {$data['query']=$this->admin->get_order_wid($this->session->userdata('a_wid'));}
+	    else{$data['query']="";}
         $this->load->view('header');
-		$this->load->view('vieworder',$details);
+		$this->load->view('vieworder',$data);
 		$this->load->view('footer');
 	}
 	public function orderview($id)

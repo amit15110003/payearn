@@ -125,6 +125,13 @@ class admin extends CI_Model
                 $query = $this->db->get('orderpos');
 		return $query->result();
 	}
+	function get_order_wid($wid)
+	{	
+		$this->db->where('o_wid', $wid);
+		$this->db->order_by("order_id","desc");
+                $query = $this->db->get('orderpos');
+		return $query->result();
+	}
 	function get_orderid($id)
 	{	
 		$this->db->where('order_id', $id);

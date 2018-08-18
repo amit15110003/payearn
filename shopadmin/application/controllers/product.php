@@ -16,7 +16,13 @@ class product extends CI_Controller {
 
 	}
 	public function index()
-	{   $data['query']=$this->productmodal->get_product();
+	{   if($this->session->userdata('a_design')=="Admin")
+		{
+			$data['query']=$this->productmodal->get_product();
+	    }
+	    elseif($this->session->userdata('a_design')=="Vendor")
+	    {$data['query']=$this->productmodal->get_product_wid($this->session->userdata('a_wid'));}
+	    else{$data['query']="";}
 		$this->load->view('header');
 		$this->load->view('viewproduct',$data);
 		$this->load->view('footer');

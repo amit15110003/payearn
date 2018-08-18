@@ -59,6 +59,11 @@ class productmodal extends CI_Model
         $query = $this->db->get('product');
 		return $query->result();
 	}
+	function get_product_wid($wid)
+	{   $this->db->where('p_warehouse',$wid);
+        $query = $this->db->get('product');
+		return $query->result();
+	}
 	function productbyid($p_id)
 	{
 		$this->db->where('p_id', $p_id);
